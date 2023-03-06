@@ -8,6 +8,8 @@ type IconButtonPropsType = {
     disabled?: boolean;
     onClick?: () => void;
 };
+// The component should have the following props: children, variant? = "primary", onClick?
+// The variants should be enumerated as strings of the following: primary, and secondary.
 
 const IconButton = ({ children, variant = "primary", onClick = () => { } }: IconButtonPropsType) => {
     const typeStyle =
