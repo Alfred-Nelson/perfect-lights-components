@@ -1,4 +1,6 @@
+import HeartIcon from "./assests/HeartIcon";
 import Button from "./components/Button";
+import IconButton from "./components/IconButton";
 
 
 function App() {
@@ -10,14 +12,23 @@ function App() {
 
       </div>
 
-      <div className="flex justify-center mt-[20svh]">
+      <div className="flex justify-center space-x-5 mt-[20svh]">
         <Button
-          variant="secondary-outline"  // primary , primary-dark, secondary
+          variant="secondary-outline"  // primary , primary-dark, secondary, secondary-outline
           placeholder="Button"
         // disabled="true"
         // leftIcon={<CreateIcon />}
         />
+        <IconButton
+          variant="secondary-outline"  
+        >
+          <HeartIcon  />
+        </IconButton>
+        
       </div>
+
+
+
     </>
 
   );
