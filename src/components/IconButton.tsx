@@ -34,7 +34,7 @@ const IconButton = ({
     return (
         <button
             onClick={onClick}
-            className={`flex px-2 py-2 justify-center items-center ${typeStyle} ${disabled ? disabledStyle : typeStyle}`}
+            className={`flex px-2  py-2 justify-center items-center ${typeStyle} ${disabled ? disabledStyle : typeStyle}`}
         >
             {children}
         </button>

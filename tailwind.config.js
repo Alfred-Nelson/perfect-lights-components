@@ -9,7 +9,8 @@ module.exports = {
         "pot-grey6": "#111111",
         "pot-grey2": "#383838",
         "pot-grey5": "#242424",
-        "pot-lightgrey":"#CBCBCB"
+        "pot-lightgrey":"#CBCBCB",
+        "pot-maroon":"#772021"
       },
     },
   },

@@ -16,7 +16,7 @@ export type ButtonPropsType = {
     disabled?: boolean;
     leftIcon?: React.ReactNode | null;
     rightIcon?: React.ReactNode | null;
-    hint?: string;
+    hint?: string | string[]
     error?: string;
     label?: string;
 };
@@ -33,11 +33,6 @@ export const secondaryStyle: string =
 
 export const secondaryOutlineStyle: string =
     "bg-white text-black stroke-black border-2 border-pot-grey5 hover:bg-pot-grey5 hover:text-white hover:stroke-white active:bg-pot-grey2  active:text-white active:border-none ease-in-out transition disabled:opacity-75";
-
-// export const tertiaryStyle: string =
-//     "text-pot-darkblue stroke-pot-darkblue hover:bg-pot-lightblue2 hover:text-pot-blue2 hover:stroke-pot-blue2 active:bg-pot-lightblue active:text-pot-blue active:stroke-pot-blue";
-// const blueStyle: string = "bg-pot-blue text-white stroke-white";
-// const blankStyle: string = "bg-transparent text-black stroke-black";
 
 export const SecondaryDisabledStyle: string =
     "bg-pot-lightgrey text-pot-grey1 stroke-pot-grey1 cursor-not-allowed disabled:hover";
@@ -86,7 +81,7 @@ const Button = ({
             {/* <LinkDiv to={to} className="w-fit"> */}
             <button
                 onClick={() => !disabled && onClick()}
-                className={`${typeStyle} px-4 py-2.5 ${disabled ? disabledStyle : typeStyle}`}>
+                className={`${typeStyle} px-4 py-1 ${disabled ? disabledStyle : typeStyle}`}>
                 {leftIcon}
                 <p className="max-w-[40vw] truncate">{placeholder}</p>
                 {rightIcon && <div className="pl-2 flex items-center">{rightIcon}</div>}
