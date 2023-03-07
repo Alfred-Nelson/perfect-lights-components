@@ -30,7 +30,7 @@ const IconButton = ({ children, variant = "primary", onClick = () => { } }: Icon
     return (
         <button
             onClick={onClick}
-            className={`flex px-2 py-2 justify-center items-center ${typeStyle}`}
+            className={`flex px-3 py-2.5 justify-center items-center ${typeStyle}`}
         >
             {children}
         </button>
