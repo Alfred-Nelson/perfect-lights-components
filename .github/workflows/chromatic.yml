@@ -1,8 +1,10 @@
 # Workflow name
-name: 'Chromatic Deployment'
+name: 'Perfect lights Storybook Chromatic Deployment'
 
 # Event for the workflow
-on: push
+on: 
+  push:
+    paths: ["stories/**"]
 
 permissions:
   contents: write
@@ -18,7 +20,9 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
-      - run: npm run
+      - run: |
+          npm i
+          npm run
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
