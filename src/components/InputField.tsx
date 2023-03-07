@@ -67,7 +67,7 @@ const InputField = ({
                     } stroke-black ease-in-out transition`}
             >
                 {leftIcon && (
-                    <div className={`absolute inset-y-0 left-0 flex items-center pl-3 ml-2 pointer-events-none`}>{leftIcon}</div>
+                    <div className={`absolute inset-y-0 left-0 flex items-center pl-2 ml-2 pointer-events-none`}>{leftIcon}</div>
                 )}
                 <input
                     ref={inputRef}
@@ -77,7 +77,7 @@ const InputField = ({
                     onFocus={() => setFocusInput(true)}
                     onBlur={() => setFocusInput(false)}
                     onChange={(e) => setInputVal(e.target.value)}
-                    className={`${typeStyle} text-[13px] w-full ${leftIcon ? "pl-10" : "pr-10"}  p-2.5 ${disabled ? disabledStyle : typeStyle}`
+                    className={`${typeStyle} text-[13px] w-full ${leftIcon ? "pl-10" : "pr-10"}  p-2 ${disabled ? disabledStyle : typeStyle}`
                     }
                 />
                 {rightIcon && (
