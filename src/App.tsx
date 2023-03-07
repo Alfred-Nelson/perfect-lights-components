@@ -5,30 +5,26 @@ import IconButton from "./components/IconButton";
 
 function App() {
   return (
-
     <>
       <div className="flex justify-center mt-[20svh]">
         <p className="bg-pot-yellow px-4 py-1 font-semibold">Welcome to Perfect Lights</p>
-
       </div>
 
       <div className="flex justify-center space-x-5 mt-[20svh]">
         <Button
-          variant="secondary-outline"  // primary , primary-dark, secondary, secondary-outline
+          variant="secondary"  // primary , primary-dark, secondary, secondary-outline
           placeholder="Button"
+          disabled={true}
         // disabled="true"
         // leftIcon={<CreateIcon />}
         />
         <IconButton
-          variant="secondary-outline"  
+          variant="secondary-outline"
         >
-          <HeartIcon  />
+          <HeartIcon />
         </IconButton>
-        
+
       </div>
-
-
-
     </>
 
   );

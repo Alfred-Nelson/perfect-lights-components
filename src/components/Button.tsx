@@ -13,7 +13,7 @@ export type ButtonPropsType = {
     | "primary-dark"
     | "secondary"
     | "secondary-outline"
-    // disabled?: boolean;
+    disabled?: boolean;
     leftIcon?: React.ReactNode | null;
     rightIcon?: React.ReactNode | null;
     hint?: string;
@@ -39,8 +39,10 @@ export const secondaryOutlineStyle: string =
 // const blueStyle: string = "bg-pot-blue text-white stroke-white";
 // const blankStyle: string = "bg-transparent text-black stroke-black";
 
-// export const primaryDisabledStyle: string =
-//     "bg-pot-grey text-pot-textgrey stroke-pot-textgrey cursor-not-allowed";
+export const SecondaryDisabledStyle: string =
+    "bg-pot-lightgrey text-pot-grey1 stroke-pot-grey1 cursor-not-allowed disabled:hover";
+
+export const secondaryOutlineStyleDisabled: string = "bg-pot-white text-pot-grey1 stroke-pot-grey1 border-2 border-pot-grey1 cursor-not-allowed disabled:hover"
 // export const primaryOutlineDisabledStyle: string =
 //     "shadow-[inset_0_0_0_1px_rgba(203,203,203,1)] text-pot-textgrey stroke-pot-textgrey cursor-not-allowed";
 // export const tertiaryDisabledStyle: string =
@@ -50,7 +52,7 @@ export const secondaryOutlineStyle: string =
 const Button = ({
     variant = "primary",
     placeholder,
-    // disabled = false,
+    disabled = false,
     leftIcon = null,
     rightIcon = null,
     onClick = () => { },
@@ -70,24 +72,21 @@ const Button = ({
                     ? secondaryStyle
                     : variant === "secondary-outline"
                         ? secondaryOutlineStyle : ""
-    // : variant === "blue"
-    //     ? blueStyle
-    //     : variant === "blank" && blankStyle;
-    // const disabledStyle =
-    // variant === "primary" || variant === "secondary"
-    //     ? primaryDisabledStyle
-    //     : variant === "primary_outline"
-    //         ? primaryOutlineDisabledStyle
-    //         : variant === "tertiary" && tertiaryDisabledStyle;
 
-    console.log(typeStyle)
+
+    const disabledStyle =
+        variant === "primary" || variant === "secondary"
+            ? SecondaryDisabledStyle
+            : variant === "secondary-outline" || variant === "primary-dark"
+                ? secondaryOutlineStyleDisabled : ""
+    // console.log(typeStyle)
+
     return (
         <>
             {/* <LinkDiv to={to} className="w-fit"> */}
             <button
-                // onClick={() => !disabled && onClick()}
-                // ${disabled ? disabledStyle : typeStyle}
-                className={`${typeStyle} px-4 py-2.5 `}>
+                onClick={() => !disabled && onClick()}
+                className={`${typeStyle} px-4 py-2.5 ${disabled ? disabledStyle : typeStyle}`}>
                 {leftIcon}
                 <p className="max-w-[40vw] truncate">{placeholder}</p>
                 {rightIcon && <div className="pl-2 flex items-center">{rightIcon}</div>}
