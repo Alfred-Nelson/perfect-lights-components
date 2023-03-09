@@ -101,10 +101,10 @@ function App() {
 
 
       <div className="flex justify-center space-x-5 mt-10">
-        {/* <Button
+        <Button
           variant="secondary"  // primary , primary-dark, secondary, secondary-outline
-          label="Button"
-        // disabled="true"
+          placeholder="Button"
+        // disabled={true}
         leftIcon={<HeartIcon />}
         />
       </div>
@@ -126,7 +126,7 @@ function App() {
           // disabled
           // leftIcon={<HeartIcon />}
           rightIcon={<HeartIcon />}
-        /> */}
+        /> 
       </div>
     </>
 
