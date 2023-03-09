@@ -1,4 +1,4 @@
-import HeartIcon from "./assests/HeartIcon";
+import HeartIcon from "./assets/HeartIcon";
 import Button from "./components/Button";
 import IconButton from "./components/IconButton";
 import InputField from "./components/InputField";
@@ -13,11 +13,10 @@ function App() {
 
       <div className="flex justify-center space-x-5 mt-10">
         <Button
-          variant="secondary"  // primary , primary-dark, secondary, secondary-outline
-          placeholder="Button"
-        // disabled={true}
+          variant="secondary-outline"  // primary , primary-dark, secondary, secondary-outline
+          label="Button"
         // disabled="true"
-        // leftIcon={<CreateIcon />}
+        leftIcon={<HeartIcon />}
         />
       </div>
       <div className="flex justify-center space-x-5 mt-10">

@@ -3,7 +3,6 @@ import React from "react";
 // import LinkDiv from "./LinkDiv";
 
 type MustButtonPropsType = {
-    placeholder: string;
     onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => Promise<void> | void;
 };
 
@@ -19,14 +18,15 @@ export type ButtonPropsType = {
     hint?: string | string[]
     error?: string;
     label?: string;
+    placeholder?: string;
 };
 // onClick?, label?, placeholder, hint?, error?, leftIcon?, rightIcon?, variant? = "primary"
 // The buttons should have enumerated variants which are: primary, primary-dark, secondary, secondary-outline
 export const primaryStyle: string =
-    "bg-pot-yellow text-white stroke-white hover:bg-pot-grey5 active:bg-pot-grey2 hover:stroke-black ease-in-out transition";
+    "bg-pot-yellow text-white stroke-white hover:bg-pot-grey5 active:bg-pot-grey2 border-2 border-pot-yellow hover:border-pot-grey5 ease-in-out transition";
 
 export const primaryDarkStyle: string =
-    "bg-pot-yellow text-white stroke-white hover:border-2 border-pot-yellow hover:bg-pot-grey5 active:bg-pot-grey2 ease-in-out transition";
+    "bg-pot-yellow text-white stroke-white border-2 border-pot-yellow hover:bg-pot-grey5 active:bg-pot-grey2 ease-in-out transition";
 
 export const secondaryStyle: string =
     "bg-pot-grey5 text-white border-2 border-pot-grey5 stroke-white hover:bg-white hover:text-black hover:border-2 hover:stroke-black hover:border-pot-grey5 active:bg-pot-grey2  active:text-white active:border-none ease-in-out transition";
@@ -46,8 +46,8 @@ export const secondaryOutlineStyleDisabled: string = "bg-pot-white text-pot-grey
 
 const Button = ({
     variant = "primary",
-    placeholder,
     disabled = false,
+    placeholder,
     leftIcon = null,
     rightIcon = null,
     onClick = () => { },
@@ -80,10 +80,11 @@ const Button = ({
         <>
             {/* <LinkDiv to={to} className="w-fit"> */}
             <button
-                onClick={() => !disabled && onClick()}
-                className={`${typeStyle} px-4 py-1 ${disabled ? disabledStyle : typeStyle}`}>
+                // onClick={() => !disabled && onClick()}
+                // ${disabled ? disabledStyle : typeStyle}
+                className={`${typeStyle} px-3 py-1.5 flex gap-x-[1vw] items-center`}>
                 {leftIcon}
-                <p className="max-w-[40vw] truncate">{placeholder}</p>
+                <p className="max-w-[40vw] truncate">{label}</p>
                 {rightIcon && <div className="pl-2 flex items-center">{rightIcon}</div>}
             </button>
             {/* </LinkDiv> */}
