@@ -8,17 +8,17 @@ export default {
     component: Button,
 }
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />
+const Template: ComponentStory<typeof Button> = (args: any) => <Button {...args} />
 
 export const Primary = Template.bind({})
-Primary.args={
+Primary.args = {
     label: "Button",
     leftIcon: <HeartIcon />,
     rightIcon: <RightArrowIcon />
 }
 
 export const PrimaryDark = Template.bind({})
-PrimaryDark.args={
+PrimaryDark.args = {
     label: "Button",
     variant: "primary-dark",
     leftIcon: <HeartIcon />,
@@ -26,7 +26,7 @@ PrimaryDark.args={
 }
 
 export const Secondary = Template.bind({})
-Secondary.args={
+Secondary.args = {
     label: "Button",
     variant: "secondary",
     leftIcon: <HeartIcon />,
@@ -34,7 +34,7 @@ Secondary.args={
 }
 
 export const SecondaryOutline = Template.bind({})
-SecondaryOutline.args={
+SecondaryOutline.args = {
     label: "Button",
     variant: "secondary-outline",
     leftIcon: <HeartIcon />,
