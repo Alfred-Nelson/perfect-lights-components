@@ -46,7 +46,7 @@ export const secondaryOutlineStyleDisabled: string = "bg-pot-white text-pot-grey
 
 const Button = ({
     variant = "primary",
-    placeholder="",
+    placeholder,
     disabled = false,
     leftIcon = null,
     rightIcon = null,
