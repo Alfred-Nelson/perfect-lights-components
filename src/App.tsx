@@ -4,6 +4,7 @@ import HorizontalCard from "./components/HorizontalCard";
 import IconButton from "./components/IconButton";
 import InputField from "./components/InputField";
 import VerticalCard from "./components/VerticalCard";
+import ProductCard from "./components/ProductCard";
 
 const Horizontaldata = [
   {
@@ -122,6 +123,28 @@ const VerticalData = [
 
 ]
 
+const ProductData = [
+  {
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    category: "ECO",
+    name: "LED Cob Spot Light Hybec | PRO-45",
+    price: 4000
+  },
+  {
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    category: "ELITE",
+    name: "LED Cob Spot Light Hybec | PRO-45",
+    price: 4000
+  },
+  {
+    brand: "Tommy Geoco’s",
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    category: "PROFESSIONAL",
+    name: "LED Cob Spot Light Hybec | PRO-45",
+    price: 4000
+  },
+]
+
 
 function App() {
   return (
@@ -132,6 +155,19 @@ function App() {
 
 
 
+      {/* Product Card Component */}
+      <div className="flex flex-wrap justify-cente items-center gap-5 p-8">
+        {
+          ProductData?.map((el, i) => {
+            // console.log(el, "product");
+            return (
+              <div key={i} >
+                <ProductCard imageUrl={el.imgUrl} price={el.price} name={el.name} category={el.category} brand={el.brand} />
+              </div>
+            )
+          })
+        }
+      </div>
 
 
 
@@ -139,11 +175,11 @@ function App() {
       <div className="flex flex-wrap justify-cente items-center gap-5 p-8">
         {
           VerticalData?.map((el, i) => {
-            console.log(el, "element");
+            // console.log(el, "element");
             return (
               // max-w-fit min-w-[98px] max-h-fit min-h-[166px]
-              <div>
-                <VerticalCard key={i} imageUrl={el.imgUrl} price={el.price} name={el.name} message={el.message} degree={el.degree} />
+              <div key={i}>
+                <VerticalCard imageUrl={el.imgUrl} price={el.price} name={el.name} message={el.message} degree={el.degree} />
               </div>
             )
           })
@@ -159,8 +195,8 @@ function App() {
           Horizontaldata?.map((el, i) => {
             // console.log(el);
             return (
-              <div>
-                <HorizontalCard key={i} imageUrl={el.imageUrl} name={el.name} specification={el.specification} price={el.price} message={el.message} />
+              <div key={i}>
+                <HorizontalCard imageUrl={el.imageUrl} name={el.name} specification={el.specification} price={el.price} message={el.message} />
               </div>
             )
           })
