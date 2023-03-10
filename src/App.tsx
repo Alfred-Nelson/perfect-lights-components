@@ -137,6 +137,12 @@ const ProductData = [
     price: 4000
   },
   {
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    category: "ELITE",
+    name: "LED Cob Spot Light Hybec | PRO-45",
+    price: 4000
+  },
+  {
     brand: "Tommy Geoco’s",
     imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
     category: "PROFESSIONAL",
@@ -156,7 +162,7 @@ function App() {
 
 
       {/* Product Card Component */}
-      <div className="flex flex-wrap justify-cente items-center gap-5 p-8">
+      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         {
           ProductData?.map((el, i) => {
             // console.log(el, "product");
@@ -172,7 +178,7 @@ function App() {
 
 
       {/* Vertical Card Component */}
-      <div className="flex flex-wrap justify-cente items-center gap-5 p-8">
+      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         {
           VerticalData?.map((el, i) => {
             // console.log(el, "element");
@@ -190,7 +196,7 @@ function App() {
 
 
       {/* Horizontal Card Component */}
-      <div className="flex flex-wrap justify-cente items-center gap-5 p-8">
+      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         {
           Horizontaldata?.map((el, i) => {
             // console.log(el);
