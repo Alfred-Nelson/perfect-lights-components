@@ -64,43 +64,8 @@ const VerticalCard = ({
             <p className="py-2 font-semibold text-[12px] leading-3">Price: Rs {price}</p>
           </div>
         }
-        {degree && <div  className="w-full flex flex-row items-center justify-center text-center border-t-2 border-[#F4F2EE]"> <p className="w-full mt-2 font-semibold text-[12px]">{degree}</p> </div>}
+        {degree && <div  className="w-full flex flex-row items-center justify-center text-center border-t-2 border-[#F4F2EE]"> <p className="w-full mt-2 font-semibold text-[12px] font-gilroy">{degree}</p> </div>}
       </div>
-
-      {/* <div className={`w-full flex flex-col items-center text-center text-sm gap-y-1 ${primaryVerticalCardStyle} px-3 py-4`}>
-        <div className=" flex items-center w-[69px] h-[53px] m-auto border-2 border-[#3300ff]">
-          <img className="w-full h-full object-cover border-2 border-black" src={imageUrl} alt={name} />
-        </div>
-        <hr className="w-full border-[5px] border-[#4bff4b]"></hr>
-        <div className="w-full flex flex-col items-center border-[1px] border-[#F4F2EE] py-2 ">
-          <div className="w-full flex flex-row items-center justify-between gap-0 border-2 border-[#c504ff]">
-            {
-              name && <p className=" font-semibold text-[12px] text-center border-2 border-[#3300ff]">{name}</p>
-            }
-            
-            {
-              message && 
-              <div className="relative z-[10] border-2 border-black">
-                <div
-                  className="cursor-pointer"
-                  onMouseEnter={(): void => {
-                    handleMouseOver();
-                    setShowSpecificInfo(message)
-                  }}
-                  onMouseLeave={(): void => setIsHover(false)}>
-                  <InfoIcon />
-                </div>
-                {isHover ? (<ToolTip message={showSpecificInfo} />) : null}
-              </div>
-            }
-          </div>
-
-         
-         { degree && <p className="text-[12px] leading-[26px] border-2 border-[#ff1515]">{degree}</p>}
-          <hr className="border-[1px] border-[#F4F2EE]"></hr>
-          {price && <p className="py-2 font-semibold text-[12px] leading-3">Price: Rs {price}</p>}
-        </div>
-      </div> */}
     </>
   );
 };

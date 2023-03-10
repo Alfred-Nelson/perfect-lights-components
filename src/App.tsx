@@ -135,6 +135,7 @@ function App() {
 
 
 
+      {/* Vertical Card Component */}
       <div className="flex flex-wrap justify-cente items-center gap-5 p-8">
         {
           VerticalData?.map((el, i) => {
@@ -152,8 +153,7 @@ function App() {
 
 
 
-
-
+      {/* Horizontal Card Component */}
       <div className="flex flex-wrap justify-cente items-center gap-5 p-8">
         {
           Horizontaldata?.map((el, i) => {
@@ -169,7 +169,7 @@ function App() {
 
 
 
-
+      {/* Button Component */}
       <div className="flex justify-center space-x-5 mt-10">
         <Button
           variant="secondary"  // primary , primary-dark, secondary, secondary-outline
@@ -180,7 +180,7 @@ function App() {
       </div>
 
 
-
+      {/* Icon ButtonComponent */}
       <div className="flex justify-center space-x-5 mt-10">
         <IconButton
           variant="secondary"
@@ -190,7 +190,7 @@ function App() {
       </div>
 
 
-
+      {/* InputField Component */}
       <div className="flex justify-center m-auto w-60 space-x-5 mt-10">
 
         <InputField
