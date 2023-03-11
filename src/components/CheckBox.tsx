@@ -1,37 +1,55 @@
-import React from "react";
 import "../style/Checkbox.css";
 
 type CheckboxPropType = {
-  label?: string;
-  checked: boolean;
+  value?: number;
+  // label?: string;
+  // checked: boolean;
   onClick?: () => void;
   disabled?: boolean;
-  small?: boolean;
-  showMinus?: boolean;
+  // small?: boolean;
+  // showMinus?: boolean;
 };
 
 const Checkbox = ({
-  checked = false,
-  onClick,
-  label,
+  value = 0,
+  // onClick,
   disabled = false,
-  small = false,
-  showMinus = false,
 }: CheckboxPropType) => {
-  const size = small ? "w-4 h-4" : "lg:w-5 lg:h-5 w-4 h-4";
+  const size = true ? "w-4 h-4" : "lg:w-5 lg:h-5 w-4 h-4";
+  const borderStyle =
+    "cursor-pointer border-2 border-pot-grey hover:border-2 hover:border-pot-yellow hover:opacity-50 active:border-2 active:border-black active:opacity-100";
+  const tickStyle =
+    "checked before:bg-pot-yellow bg-white border-2 border-pot-yellow  hover:bg-pot-yellow  hover:bg-opacity-25  active:border-2 active:border-black cursor-pointer relative";
+  const minusStyle =
+    "minus before:bg-pot-yellow bg-white border-2 border-pot-yellow hover:bg-pot-yellow  hover:bg-opacity-25 active:border-black cursor-pointer relative";
+
+  const checkStyle =
+    value === 0
+      ? borderStyle
+      : value === 1
+        ? tickStyle
+        : value === 2
+          ? minusStyle
+          : "";
+
+  const borderDisabledStyle = "cursor-not-allowed relative  border-2 ";
+  const checkedDisabledStyle = "checked relative cursor-not-allowed before:bg-pot-grey2 border-2 before:bg-opacity-25";
+  const disabledStyle =
+    value === 0
+      ? borderDisabledStyle
+      : value === 1
+        ? checkedDisabledStyle
+        : "";
+
 
   return (
     <label className="flex gap-x-2.5 items-center relative">
       <input
         type="checkbox"
-        defaultChecked={checked}
-        onChange={disabled ? () => { } : onClick}
-        className={`appearance-none ${size} ${checked
-          ? `${disabled ? "checked relative cursor-not-allowed before:bg-pot-grey2 border-2 before:bg-opacity-25" : " checked before:bg-pot-yellow bg-white border-2 border-pot-yellow  hover:bg-pot-yellow  hover:bg-opacity-25  active:border-2 active:border-black cursor-pointer relative"} `
-          : `${disabled ? "cursor-not-allowed" : showMinus ? "minus before:bg-white  bg-white border-2 border-pot-yellow cursor-pointer relative" : "cursor-pointer hover:border-2 hover:border-pot-yellow active:border-2 active:border-black "} border-2`
-          }`}
+        // defaultChecked={checked}
+        // onChange={disabled ? () => {} : onClick}
+        className={`appearance-none ${size} ${disabled ? disabledStyle : checkStyle}`}
       />
-      {label && (<span>{label}</span>)}
     </label>
   );
 };

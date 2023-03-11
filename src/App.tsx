@@ -7,6 +7,7 @@ import VerticalCard from "./components/VerticalCard";
 import ProductCard from "./components/ProductCard";
 import Checkbox from "./components/CheckBox";
 import { useState } from "react"
+import SingleSelection from "./components/SingleSelection";
 
 const Horizontaldata = [
   {
@@ -166,30 +167,22 @@ function App() {
       </div>
 
 
-      {/* <CheckboxDropdown
-          selectedValues={state.subDepts}
-          onSelect={(value = [] as SelectableDropdownValueType[]) => {
-            dispatch({
-              type: selCatActionTypeEnum.setSubDepts,
-              payload: value,
-            });
-          }}
-          label="Sub-department"
-          boxText="Select a department"
-          optionList={subDeptsOptions}
-          disabled={(state.disabled && state?.disabled >= 1) || false}
-          greyOut={disabledOverall}
-          selectedBoxTextType="number_only"
-        /> */}
+      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+        <SingleSelection value={0} disabled={true} />
+        <SingleSelection value={1} disabled={false} />
+      </div> */}
+
+
+
 
 
 
       {/*Single Check Box */}
-      <Checkbox label="Check" checked={check} onClick={() => setCheck((prev) => !prev)} showMinus={false} disabled={true} />
-
-
-
-
+      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+        <Checkbox value={0} disabled={true} />
+        <Checkbox value={1} disabled={false} />
+        <Checkbox value={2} disabled={false} />
+      </div>
 
 
       {/* Product Card Component */}
