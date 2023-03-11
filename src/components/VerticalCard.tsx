@@ -45,7 +45,7 @@ const VerticalCard = ({
           <p className=" font-semibold text-[12px] mt-2 ">{name}</p>
           {
             message &&
-            <div className="relative z-[10] mt-2">
+            <div className="relative mt-2">
               <div
                 className="cursor-pointer"
                 onMouseEnter={(): void => {
@@ -64,7 +64,7 @@ const VerticalCard = ({
             <p className="py-2 font-semibold text-[12px] leading-3">Price: Rs {price}</p>
           </div>
         }
-        {degree && <div  className="w-full flex flex-row items-center justify-center text-center border-t-2 border-[#F4F2EE]"> <p className="w-full mt-2 font-semibold text-[12px] font-gilroy">{degree}</p> </div>}
+        {degree && <div  className="w-full flex flex-row items-center justify-center text-center border-t-2 border-[#F4F2EE]"> <p className="w-full mt-2 font-semibold text-[12px] font-Gilroy">{degree}</p> </div>}
       </div>
     </>
   );

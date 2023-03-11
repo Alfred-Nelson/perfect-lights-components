@@ -42,6 +42,7 @@ const ProductCard = ({
                         <p className="ml-2">{category}</p>
                     </div>
                 </div>
+
                 <div className="w-full flex flex-row justify-between space-x-3 ">
                     <div className=" flex items-center  text-xs w-[50%] text-start">
                         <p className="leading-2">{name}</p>

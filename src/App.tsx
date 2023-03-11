@@ -5,6 +5,8 @@ import IconButton from "./components/IconButton";
 import InputField from "./components/InputField";
 import VerticalCard from "./components/VerticalCard";
 import ProductCard from "./components/ProductCard";
+import Checkbox from "./components/CheckBox";
+import { useState } from "react"
 
 const Horizontaldata = [
   {
@@ -77,36 +79,36 @@ const VerticalData = [
     imgUrl: "https://www.supercoloring.com/sites/default/files/styles/coloring_thumbnail/public/cif/2022/01/1570-medium-square-emoji-coloring-page.png",
     name: "Square",
     price: 2000,
-    message: "Hello I'm Perfect Light Shape",
+    message: "Hello",
 
   },
   {
     imgUrl: "https://www.shutterstock.com/image-vector/90-degree-angle-icon-vector-260nw-2249885237.jpg",
     name: "L-Square",
     price: 2000,
-    message: "Hello I'm Perfect Light Shape",
+    message: "Hello",
   },
   {
     imgUrl: "https://i.pinimg.com/originals/5c/ff/80/5cff802d48d74607ac929ec2751684e9.jpg",
     name: "Line",
     price: 2000,
-    message: "Hello I'm Perfect Light Shape",
+    message: "Hello",
   },
   {
     imgUrl: "https://www.supercoloring.com/sites/default/files/styles/coloring_thumbnail/public/cif/2022/01/1570-medium-square-emoji-coloring-page.png",
     name: "Square",
-    message: "Hello I'm Perfect Light Shape",
+    message: "Hello",
 
   },
   {
     imgUrl: "https://www.shutterstock.com/image-vector/90-degree-angle-icon-vector-260nw-2249885237.jpg",
     name: "L-Square",
-    message: "Hello I'm Perfect Light Shape",
+    message: "Hello",
   },
   {
     imgUrl: "https://i.pinimg.com/originals/5c/ff/80/5cff802d48d74607ac929ec2751684e9.jpg",
     name: "Line",
-    message: "Hello I'm Perfect Light Shape",
+    message: "Hello",
   },
   {
     imgUrl: "https://www.shutterstock.com/image-vector/cone-shape-illustration-vector-graphic-260nw-1660194241.jpg",
@@ -153,6 +155,10 @@ const ProductData = [
 
 
 function App() {
+  const [check, setCheck] = useState<boolean>(false);
+
+
+
   return (
     <>
       <div className="flex justify-center mt-[20svh]">
@@ -160,9 +166,34 @@ function App() {
       </div>
 
 
+      {/* <CheckboxDropdown
+          selectedValues={state.subDepts}
+          onSelect={(value = [] as SelectableDropdownValueType[]) => {
+            dispatch({
+              type: selCatActionTypeEnum.setSubDepts,
+              payload: value,
+            });
+          }}
+          label="Sub-department"
+          boxText="Select a department"
+          optionList={subDeptsOptions}
+          disabled={(state.disabled && state?.disabled >= 1) || false}
+          greyOut={disabledOverall}
+          selectedBoxTextType="number_only"
+        /> */}
+
+
+
+      {/*Single Check Box */}
+      <Checkbox label="Check" checked={check} onClick={() => setCheck((prev) => !prev)} showMinus={false} disabled={true} />
+
+
+
+
+
 
       {/* Product Card Component */}
-      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         {
           ProductData?.map((el, i) => {
             // console.log(el, "product");
@@ -173,12 +204,12 @@ function App() {
             )
           })
         }
-      </div>
+      </div> */}
 
 
 
       {/* Vertical Card Component */}
-      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+      {/* <div className="flex flex-wrap justify-between items-center gap-5 p-8">
         {
           VerticalData?.map((el, i) => {
             // console.log(el, "element");
@@ -190,13 +221,13 @@ function App() {
             )
           })
         }
-      </div>
+      </div> */}
 
 
 
 
       {/* Horizontal Card Component */}
-      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         {
           Horizontaldata?.map((el, i) => {
             // console.log(el);
@@ -207,33 +238,33 @@ function App() {
             )
           })
         }
-      </div>
+      </div> */}
 
 
 
       {/* Button Component */}
-      <div className="flex justify-center space-x-5 mt-10">
+      {/* <div className="flex justify-center space-x-5 mt-10">
         <Button
           variant="secondary"  // primary , primary-dark, secondary, secondary-outline
-          placeholder="Button"
+          label="Button"
           // disabled={true}
           leftIcon={<HeartIcon />}
         />
-      </div>
+      </div> */}
 
 
       {/* Icon ButtonComponent */}
-      <div className="flex justify-center space-x-5 mt-10">
+      {/* <div className="flex justify-center space-x-5 mt-10">
         <IconButton
           variant="secondary"
         >
           <HeartIcon />
         </IconButton>
-      </div>
+      </div> */}
 
 
       {/* InputField Component */}
-      <div className="flex justify-center m-auto w-60 space-x-5 mt-10">
+      {/* <div className="flex justify-center m-auto w-60 space-x-5 mt-10">
 
         <InputField
           label="Password"
@@ -244,7 +275,7 @@ function App() {
           // leftIcon={<HeartIcon />}
           rightIcon={<HeartIcon />}
         />
-      </div>
+      </div> */}
     </>
 
   );
