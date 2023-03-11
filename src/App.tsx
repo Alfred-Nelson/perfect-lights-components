@@ -167,10 +167,10 @@ function App() {
       </div>
 
 
-      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         <SingleSelection value={0} disabled={true} />
         <SingleSelection value={1} disabled={false} />
-      </div> */}
+      </div>
 
 
 
