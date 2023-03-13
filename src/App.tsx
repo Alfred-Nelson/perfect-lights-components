@@ -8,6 +8,8 @@ import ProductCard from "./components/ProductCard";
 import Checkbox from "./components/CheckBox";
 import { useState } from "react"
 import SingleSelection from "./components/SingleSelection";
+import TopNavbar from "./components/NavigationOutlet";
+import BaseOutlet from "./pages";
 
 const Horizontaldata = [
   {
@@ -162,27 +164,29 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center mt-[20svh]">
+
+      <TopNavbar />
+   
+
+      {/* <div className="flex justify-center mt-[20svh]">
         <p className="bg-pot-yellow px-4 py-1 font-semibold">Welcome to Perfect Lights</p>
-      </div>
+      </div> */}
 
 
-      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+
+
+
+      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         <SingleSelection value={0} disabled={true} />
         <SingleSelection value={1} disabled={false} />
-      </div>
-
-
-
-
-
+      </div> */}
 
       {/*Single Check Box */}
-      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         <Checkbox value={0} disabled={true} />
         <Checkbox value={1} disabled={false} />
         <Checkbox value={2} disabled={false} />
-      </div>
+      </div> */}
 
 
       {/* Product Card Component */}
