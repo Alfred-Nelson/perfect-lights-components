@@ -11,6 +11,7 @@ type HorizontalCardPropsType = {
     price: number;
     message?: string | null;
 }
+
 export const primaryHorizontalCardStyle: string = "text-black font-normal border-2 border-[#F4F2EE] hover:boder-2 hover:border-[#D4A15E] hover:border-opacity-50 focus:outline-none focus:bg-white focus:border-pot-yellow active:border-pot-yellow active:border-2"
 
 
