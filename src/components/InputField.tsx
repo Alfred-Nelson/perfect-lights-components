@@ -2,7 +2,6 @@
 // props: label, value?, onChange?, inputType?, leftIcon?, rightIcon?, hint?, error?,
 // disabled, hover, active, and focus states.
 import React, { useState, useEffect, useRef } from "react";
-import { primaryStyle } from "./Button";
 
 type InputFieldType = {
     label?: string;
@@ -19,10 +18,10 @@ type InputFieldType = {
     disabled?: boolean;
 };
 
-export const primaryInputStyle: string = "text-black font-normal border-2 border-[#DEDEDE] hover:boder-2 hover:border-[#D4A15E] hover:border-opacity-50 focus:outline-none focus:bg-white focus:border-pot-yellow placeholder-shown:text-pot-grey2 active:border-pot-yellow active:border-2"
+export const primaryInputStyle = "text-black font-normal border-2 border-[#DEDEDE] hover:border-2 hover:border-[#D4A15E] hover:border-opacity-50 outline-none focus:bg-white focus:border-pot-yellow placeholder-shown:text-pot-grey2 active:border-pot-yellow active:border-2"
 
 
-export const InputDisabledStyle: string = "text-[#4F4F4F] disabled:appearance-none focus:outline-none disabled:opacity-100 cursor-not-allowed"
+export const InputDisabledStyle = "text-[#4F4F4F] disabled:appearance-none focus:outline-none disabled:opacity-100 cursor-not-allowed"
 
 // " text-[#4F4F4F]  disabled:appearance-none peer text-pot-grey1 stroke-pot-grey2 border-2 border-pot-grey1 disabled:opacity-50 cursor-not-allowed "
 
@@ -63,7 +62,7 @@ const InputField = ({
                 <p className="font-medium text-[15px] pb-2 px-1">{label}</p>
             )}
             <div
-                className={`relative w-full flex justify-between items-center border  ${focusInput && "border-pot-darkmaroon"
+                className={`relative w-full flex justify-between items-center  ${focusInput && "border-pot-darkmaroon"
                     } stroke-black ease-in-out transition`}
             >
                 {leftIcon && (

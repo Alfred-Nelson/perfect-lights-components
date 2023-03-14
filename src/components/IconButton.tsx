@@ -1,5 +1,5 @@
 import React from "react";
-import { primaryDarkStyle, primaryStyle, secondaryOutlineStyle, secondaryStyle, SecondaryDisabledStyle, secondaryOutlineStyleDisabled } from "./Button";
+import { primaryDarkStyle, primaryStyle, secondaryOutlineStyle, secondaryStyle, secondaryDisabledStyle, secondaryOutlineStyleDisabled } from "./Button";
 
 type IconButtonPropsType = {
     element?: React.ReactNode | null;
@@ -28,14 +28,14 @@ const IconButton = ({
                         ? secondaryOutlineStyle : ""
     const disabledStyle =
         variant === "primary" || variant === "secondary"
-            ? SecondaryDisabledStyle
+            ? secondaryDisabledStyle
             : variant === "secondary-outline" || variant === "primary-dark"
                 ? secondaryOutlineStyleDisabled : ""
     return (
         <button
             onClick={onClick}
            // className={`flex px-2  py-2 justify-center items-center ${typeStyle} ${disabled ? disabledStyle : typeStyle}`}
-            className={`flex px-3 py-2.5 justify-center items-center ${typeStyle}`}
+            className={`flex px-3 py-2.5 justify-center items-center ${disabled ? disabledStyle : typeStyle}`}
         >
             {children}
         </button>

@@ -7,9 +7,10 @@ module.exports = {
       colors: {
         "pot-yellow": "#D4A15E",
         "pot-grey1": "#F4F5F6",
-        "pot-grey6": "#111111",
         "pot-grey2": "#383838",
+        "pot-grey3": "#F9F9F9",
         "pot-grey5": "#242424",
+        "pot-grey6": "#111111",
         "pot-lightgrey":"#CBCBCB",
         "pot-maroon":"#772021"
       },
