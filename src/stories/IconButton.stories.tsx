@@ -7,7 +7,7 @@ export default {
     component: IconButton,
 }
 
-const Template: ComponentStory<typeof IconButton> = args => <IconButton {...args} />
+const Template: ComponentStory<typeof IconButton> = (args:any) => <IconButton {...args} />
 
 export const Primary = Template.bind({})
 Primary.args={

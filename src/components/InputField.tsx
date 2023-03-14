@@ -63,7 +63,7 @@ const InputField = ({
                 <p className="font-medium text-[15px] pb-2 px-1">{label}</p>
             )}
             <div
-                className={`relative w-full flex justify-between items-center border  ${focusInput && "border-pot-darkmaroon"
+                className={`relative w-full flex justify-between items-center border  ${focusInput && "border-pot-maroon"
                     } stroke-black ease-in-out transition`}
             >
                 {leftIcon && (

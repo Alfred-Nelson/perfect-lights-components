@@ -18,6 +18,7 @@ export type ButtonPropsType = {
     hint?: string | string[]
     error?: string;
     label?: string;
+    placeholder?: string;
 };
 // onClick?, label?, placeholder, hint?, error?, leftIcon?, rightIcon?, variant? = "primary"
 // The buttons should have enumerated variants which are: primary, primary-dark, secondary, secondary-outline
@@ -28,7 +29,7 @@ export const primaryDarkStyle: string =
     "bg-pot-yellow text-white stroke-white border-2 border-pot-yellow hover:bg-pot-grey5 active:bg-pot-grey2 ease-in-out transition";
 
 export const secondaryStyle: string =
-    "bg-pot-grey5 text-white border-2 border-pot-grey5 stroke-white hover:bg-white hover:text-black hover:border-2 hover:stroke-black hover:border-pot-grey5 active:bg-pot-grey2  active:text-white active:border-none ease-in-out transition";
+    "bg-pot-grey5 text-white border-2 border-pot-grey5 stroke-white hover:bg-white hover:text-black hover:border-2 hover:stroke-black hover:border-pot-grey5 active:bg-pot-grey2  active:text-white active:stroke-white active:border-none ease-in-out transition";
 
 export const secondaryOutlineStyle: string =
     "bg-white text-black stroke-black border-2 border-pot-grey5 hover:bg-pot-grey5 hover:text-white hover:stroke-white active:bg-pot-grey2  active:text-white active:border-none ease-in-out transition disabled:opacity-75";
@@ -45,7 +46,7 @@ export const secondaryOutlineStyleDisabled: string = "bg-pot-white text-pot-grey
 
 const Button = ({
     variant = "primary",
-    placeholder,
+    placeholder="",
     disabled = false,
     leftIcon = null,
     rightIcon = null,
