@@ -5,8 +5,9 @@ import Button from '../../components/Button'
 
 function ProductCustomize() {
     return (
-        <div className='flex flex-col justify-center items-center bg-black text-white h-[auto] py-32'>
-            <div className="flex flex-col justify-center w-[42%] text-center">
+        
+        <div className='flex flex-col justify-center  space-y-0 items-center text-white h-[auto] '>
+            <div className="flex flex-col justify-center w-[42%] text-center py-32">
                 <div className="flex flex-col justify-center items-center space-y-12">
                     <h1 className='text-center text-7xl text-[#E1E1E1] tracking-tight font-bold'>Product Customization</h1>
                     <p className='text-[#DBDBDB]'>
@@ -25,7 +26,7 @@ function ProductCustomize() {
 
 
 
-            <div className='w-full flex flex-col justify-start items-start border-2 border-emerald-500 space-y-20 px-32  text-left py-20 mt-11'>
+            <div className='w-full flex flex-col justify-start items-start space-y-32 px-32  text-left py-8'>
                 <div className='w-[38%]'>
                     <h2 className='text-[33px] font-bold mb-5' >Step 1:Choose a variant</h2>
                     <p>
@@ -38,7 +39,7 @@ function ProductCustomize() {
                         Lorem ipsum dolor sit amet consectetur. Viverra semper pharetra rhoncus vitae hendrerit vitae. Enim id rhoncus interdum quam ac integer id. Tempor curabitur platea viverra turpis. Lacus ultrices
                     </p>
                 </div>
-                <div className='w-[38%] border-2'>
+                <div className='w-[38%]'>
                     <h2 className='text-[33px] font-bold  mb-5'>Step 3:Choose a variant</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur. Viverra semper pharetra rhoncus vitae hendrerit vitae. Enim id rhoncus interdum quam ac integer id. Tempor curabitur platea viverra turpis. Lacus ultrices
@@ -53,10 +54,6 @@ function ProductCustomize() {
 
 
             </div>
-
-
-
-
 
 
         </div>
