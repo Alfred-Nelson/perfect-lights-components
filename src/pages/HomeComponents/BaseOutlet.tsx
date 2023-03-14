@@ -1,18 +1,18 @@
 import React from 'react'
 import ExclusiveDeal from './ExclusiveDeal'
-import ProductCustmize from './ProductCustmize'
+import ProductCustomize from './ProductCustomize'
 
 
 function BaseOutlet() {
     return (
 
-        <div>
+        <div className=''>
 
             {/* Exclusive Deals */}
             <ExclusiveDeal />
 
             {/* Product Customization */}
-            <ProductCustmize />
+            <ProductCustomize />
 
         </div>
     )

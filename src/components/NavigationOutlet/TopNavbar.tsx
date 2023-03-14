@@ -1,7 +1,7 @@
 import React from 'react'
-// import logo from "../../assets/svg/logo.svg"
-// import logo from "../../assets/svg/Minus.svg"
-// import { ReactComponent as Logo } from "../../assets/svg/Minus.svg";
+import logo from "../../assets/logo1.png"
+
+
 
 import CartIcon from "../../assets/CartIcon";
 import SearchIcon from '../../assets/SearchIcon';
@@ -11,12 +11,9 @@ function TopNavbar() {
     return (
         <header>
             <nav className='flex flex-row justify-between bg-black text-white h-[50px]'>
-                <div className="flex items-center ml-4">
-                    {/* <img src={logo} alt="logo"  /> */}
-                    {/* <Logo /> */}
-                    <p>Logo</p>
+                <div className="flex items-center ml-4 ">
+                    <img className='object-cover w-[40px] h-[40px]' src={logo} alt="logo" />
                 </div>
-
                 <div className="flex items-center max-w-screen-xl ml-48">
                     <ul className="flex flex-row  space-x-8 text-sm">
 
@@ -24,7 +21,7 @@ function TopNavbar() {
                             navItems?.map((item, i) => {
                                 return (
                                     <li key={i}>
-                                        <a href={item.to} className={` ${item.title==="Perfect Lights" ? `font-bold text-white` : `text-white`} `}>{item.title }</a>
+                                        <a href={item.to} className={` ${item.title === "Perfect Lights" ? `font-bold text-white` : `text-white`} `}>{item.title}</a>
                                     </li>
                                 )
                             })
