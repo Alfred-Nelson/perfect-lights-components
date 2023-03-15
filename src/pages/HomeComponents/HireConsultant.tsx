@@ -6,21 +6,19 @@ import man1 from "../../assets/man1.png"
 
 function HireConsultant() {
     return (
-        <div className=''>
+        <div className='w-full h-full'>
 
-            <div className='flex flex-row justify-center border-2 border-blue-500 py-32 pl-32'>
 
-                <div className='flex flex-col gap-y-6 w-full border-2 '>
+            <div className='flex justify-end items-center py-32 px-32 pr-5 relative'>
 
-                    <div className='border-2 '>
+                <div className='flex flex-col  justify-start gap-y-6 w-full  h-[500px] absolute z-10 top-[19%] left-0 px-32' >
+
+                    <div className='w-[450px]'>
                         <h1 className='text-[4rem] font-[roboto] font-bold tracking-tight'>Hire a design consultant</h1>
+                        <p className='text-md mt-2 '>Lorem ipsum dolor sit amet consectetur. Sit ac rhoncus non at arcu consequat amet etiam. Nisl massa consequat sed</p>
                     </div>
 
-                    <div >
-                        <p>Lorem ipsum dolor sit amet consectetur. Sit ac rhoncus non at arcu consequat amet etiam. Nisl massa consequat sed</p>
-                    </div>
-
-
+                   
                     <div className='flex flex-col items-start space-y-6 mt-10'>
                         <div>
                             <div className='flex flex-row items-center space-x-2'>
@@ -42,24 +40,24 @@ function HireConsultant() {
                                 </div>
                                 <p>Praesent varius justo vel justo pulvinar </p>
                             </div>
-
-
                         </div>
                         <Button variant='primary' label='Hire a consultant' rightIcon={<RightArrowIcon />} />
                     </div>
 
                 </div>
 
-                <div className='w-full relative'>
-                    <div className='rounded-full w-[full] h-[600px] bg-[#EFEFEF] bg-opacity-10 flex justify-center items-center absolute z-10 right-0 top-0'>
-                        <div className='rounded-full w-[full] h-[540px] bg-[#EFEFEF] bg-opacity-10 border-2 border-blue-500 '>
-                            <img className='rounded-b-md w-full h-full  -mt-16 border-2 object-fit' src={man1} alt="man-consultation" />
-
-                        </div>
-                    </div>
-
+                <div className='w-[600px] h-[600px] bg-[#EFEFEF] bg-opacity-10 rounded-full -ml-7  mr-10 relative -overflow-y-hidden' >
+                    <img className='absolute -top-14 right-6 w-[85%] h-[100%] ' src={man1} alt="man-consult" />
                 </div>
+
             </div>
+
+
+
+
+
+
+
 
 
 

@@ -13,6 +13,7 @@ import BaseOutlet from "./pages";
 import image43 from "./assets/image43.png"
 import image65 from "./assets/image65.png"
 import image66 from "./assets/image66.png"
+import Footer from "./components/Footer";
 
 const Horizontaldata = [
   {
@@ -168,7 +169,6 @@ function App() {
   return (
     <>
 
-      <TopNavbar />
       <BaseOutlet />
 
 
