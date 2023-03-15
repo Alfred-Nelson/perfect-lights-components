@@ -9,7 +9,7 @@ import linkedIn from "../assets/svg/linkedIn.svg"
 import copyrightsign from "../assets/svg/copyrightsign.svg"
 function Footer() {
     return (
-        <footer className='flex flex-col gap-y-20 mt-10 pt-32 pb-10 bg-black text-white'>
+        <footer className='flex flex-col gap-y-10 mt-10 pt-32 pb-10 bg-black text-white'>
 
 
 
