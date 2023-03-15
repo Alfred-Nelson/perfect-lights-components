@@ -77,7 +77,7 @@ const InputField = ({
                     onFocus={() => setFocusInput(true)}
                     onBlur={() => setFocusInput(false)}
                     onChange={(e) => setInputVal(e.target.value)}
-                    className={`${typeStyle} text-[13px] w-full ${leftIcon ? "pl-10" : "pr-10"}  p-2 ${disabled ? disabledStyle : typeStyle}`
+                    className={`${typeStyle}  text-[13px] w-full ${leftIcon ? "pl-10" : "pr-10"}  p-2 ${disabled ? disabledStyle : typeStyle}`
                     }
                 />
                 {rightIcon && (

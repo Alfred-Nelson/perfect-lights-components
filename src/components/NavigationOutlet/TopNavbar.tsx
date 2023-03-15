@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/logo1.png"
+import navbarLogo from "../../assets/svg/navbarLogo.svg"
 
 
 
@@ -12,7 +12,7 @@ function TopNavbar() {
         <header>
             <nav className='flex flex-row justify-between bg-black text-white h-[50px]'>
                 <div className="flex items-center ml-4 ">
-                    <img className='object-cover w-[40px] h-[40px]' src={logo} alt="logo" />
+                    <img src={navbarLogo} alt="logo" />
                 </div>
                 <div className="flex items-center max-w-screen-xl ml-48">
                     <ul className="flex flex-row  space-x-8 text-sm">
