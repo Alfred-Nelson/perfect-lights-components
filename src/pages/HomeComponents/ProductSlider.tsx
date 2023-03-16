@@ -34,14 +34,14 @@ function ProductSlider() {
 
     return (
 
-        <div>
-            <div className="m-auto w-[700px] text-center">
+        <div className="appearance-none bg-white text-black">
+            <div className="m-auto w-[700px] text-center ">
                 <h1 className="text-[50px] font-bold">Professionally</h1>
                 <h1 className="text-[50px] font-bold"> Recommended Products</h1>
             </div>
             <div className="w-[100%] flex  justify-center items-center gap-5 py-8 mt-10">
                 <div
-                    className="w-[86.5%] flex items-center overflow-hidden gap-[32px] border-2 border-red-600 "
+                    className="w-[86.5%] flex items-center overflow-hidden gap-[32px] "
                 >
                     {ProductData?.map((el, i) => {
                         return (

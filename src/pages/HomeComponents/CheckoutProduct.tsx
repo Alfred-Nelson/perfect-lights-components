@@ -11,7 +11,7 @@ function CheckoutProduct() {
 
         <div>
 
-            <div className='flex justify-between  relative'>
+            <div className='flex justify-between  relative bg-white '>
 
                 <div className='flex justify-start items-start w-full '><img className='w-1/2 ' src={image53} alt="" /></div>
 
@@ -23,14 +23,14 @@ function CheckoutProduct() {
             </div> */}
 
 
-                <div className='flex flex-col items-center absolute z-10 top-1/2 left-[30%] w-2/5 text-center'>
-                    <h1 className='text-[50px] font-bold'>Our team is the best in the business</h1>
+                <div className='flex flex-col items-center absolute z-10 top-1/2 left-[30%] w-2/5 text-center text-black'>
+                    <h1 className='text-[50px] font-bold '>Our team is the best in the business</h1>
                     <Button label="Check out the products" variant='primary' rightIcon={<RightArrowIcon />} />
                 </div>
             </div>
 
 
-            <div className='grid grid-cols-2 gap-6  py-24 px-24 '>
+            <div className='grid grid-cols-2 gap-6  py-24 px-24  bg-white '>
                 <div className='w-full h-auto relative'>
                     <div className='w-full h-full '>
                         <img className='w-full h-full object-fit' src={image55} alt="" />
