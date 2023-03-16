@@ -115,8 +115,6 @@ function Footer() {
 
             </div>
 
-
-
             <div className='flex justify-center items-center text-center gap-2'>
                 <img className='mt-1' src={copyrightsign} alt="copyrightsign"  /> <p>copyright text lorem ipsum</p>
             </div>
