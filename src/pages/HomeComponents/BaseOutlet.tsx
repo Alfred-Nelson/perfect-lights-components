@@ -2,6 +2,10 @@ import React from 'react'
 import ExclusiveDeal from './ExclusiveDeal'
 import HireConsultant from './HireConsultant'
 import ProductCustomize from './ProductCustomize'
+import ProductSlider from './ProductSlider'
+import CheckoutProduct from './CheckoutProduct'
+import ProfessionalUser from './ProfessionalUser'
+import MarqueeEffect from './MarqueeEffect'
 
 
 function BaseOutlet() {
@@ -16,7 +20,10 @@ function BaseOutlet() {
             <ProductCustomize />
 
             <HireConsultant />
-
+            <ProfessionalUser />
+            <MarqueeEffect />
+            <CheckoutProduct />
+            <ProductSlider />
         </div>
     )
 }

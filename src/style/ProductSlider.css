@@ -1,0 +1,24 @@
+input.productslider[type="range"] {
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 5px;
+    cursor: pointer;
+    border-radius: 0;
+    color: black;
+    border-radius: 20px;
+}
+
+::-webkit-slider-runnable-track {
+    background: #ddd;
+    /* color:black; */
+}
+
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 40px;
+    background: black;
+    box-shadow: -200px 0 0 200px black;
+    border: 2px solid black;
+}
