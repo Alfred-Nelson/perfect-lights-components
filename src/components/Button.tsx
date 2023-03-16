@@ -82,7 +82,7 @@ const Button = ({
             <button
                 // onClick={() => !disabled && onClick()}
                 // ${disabled ? disabledStyle : typeStyle}
-                className={`${typeStyle} px-3 py-2 flex gap-x-[1vw] items-center`}>
+                className={`${typeStyle} px-4 py-[9px] flex gap-x-[1vw] items-center`}>
                 {leftIcon}
                 <p className="max-w-[40vw] truncate">{label}</p>
                 {rightIcon && <div className="pl-2 flex items-center">{rightIcon}</div>}

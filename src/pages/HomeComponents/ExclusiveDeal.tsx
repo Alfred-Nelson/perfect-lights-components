@@ -2,7 +2,7 @@ import React from 'react'
 import image41 from "../../assets/image41.png"
 function ExclusiveDeal() {
     return (
-        <div className='flex flex-col space-y-0 bg-pot-grey1 px-0 py-12 '>
+        <div className='flex flex-col space-y-0 bg-pot-grey1 px-0 py-12  bg-black text-white'>
             <div className='h-auto flex justify-center space-x-12 items-center w-full   text-xl text-[#4E4E4E]'>
                 <div className='flex justify-center  w-[20%] -mt-28 text-left h-auto '>
                     <p>

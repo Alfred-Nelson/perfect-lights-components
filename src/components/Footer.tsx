@@ -11,8 +11,6 @@ function Footer() {
     return (
         <footer className='flex flex-col gap-y-10 mt-10 pt-32 pb-10 bg-black text-white'>
 
-
-
             <div className='flex flex-col items-center gap-10 border-b-2 border-b-[#1D1D1D] pb-20'>
                 <div className='flex flex-col justify-center items-center w-1/2   border-b-teal-400 text-center'>
                     <p className='text-4xl tracking-0 font-bold'>Subscribe to our newsletter</p>

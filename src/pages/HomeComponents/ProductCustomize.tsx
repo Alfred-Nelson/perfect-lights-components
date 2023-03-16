@@ -6,7 +6,7 @@ import Button from '../../components/Button'
 function ProductCustomize() {
     return (
         
-        <div className='flex flex-col justify-center  space-y-0 items-center text-white h-[auto] '>
+        <div className='flex flex-col justify-center  space-y-0 items-center  bg-black text-white h-[auto] '>
             <div className="flex flex-col justify-center w-[42%] text-center py-32">
                 <div className="flex flex-col justify-center items-center space-y-12">
                     <h1 className='text-center text-7xl text-[#E1E1E1] tracking-tight font-bold'>Product Customization</h1>

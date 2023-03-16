@@ -6,9 +6,7 @@ import man1 from "../../assets/man1.png"
 
 function HireConsultant() {
     return (
-        <div className='w-full h-full'>
-
-
+        <div className='w-full h-full  bg-black text-white'>
             <div className='flex justify-end items-center py-32 px-32 pr-5 relative'>
 
                 <div className='flex flex-col  justify-start gap-y-6 w-full  h-[500px] absolute z-10 top-[19%] left-0 px-32' >
