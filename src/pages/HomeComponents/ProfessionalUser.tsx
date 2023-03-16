@@ -79,7 +79,7 @@ function ProfessionalUser() {
 
 
   return (
-    <div className='flex flex-row gap-20 pl-24 py-24 bg-white'>
+    <div className='flex flex-row gap-20 pl-24 py-24 bg-white text-black'>
 
 
       {/*  Ist Box */}
