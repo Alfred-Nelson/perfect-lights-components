@@ -15,10 +15,7 @@ export type ButtonPropsType = {
     disabled?: boolean;
     leftIcon?: React.ReactNode | null;
     rightIcon?: React.ReactNode | null;
-    hint?: string | string[]
-    error?: string;
     label?: string;
-    placeholder?: string;
 };
 // onClick?, label?, placeholder, hint?, error?, leftIcon?, rightIcon?, variant? = "primary"
 // The buttons should have enumerated variants which are: primary, primary-dark, secondary, secondary-outline
@@ -46,13 +43,10 @@ export const secondaryOutlineStyleDisabled: string = "bg-pot-white text-pot-grey
 
 const Button = ({
     variant = "primary",
-    placeholder,
     disabled = false,
     leftIcon = null,
     rightIcon = null,
     onClick = () => { },
-    hint = "",
-    error = "",
     label = ""
 }: ButtonPropsType & MustButtonPropsType) => {
     // const fullWidthStyle = fullWidth
@@ -80,9 +74,9 @@ const Button = ({
         <>
             {/* <LinkDiv to={to} className="w-fit"> */}
             <button
-                // onClick={() => !disabled && onClick()}
+                onClick={() => !disabled && onClick()}
                 // ${disabled ? disabledStyle : typeStyle}
-                className={`${typeStyle} px-3 py-1.5 flex gap-x-[1vw] items-center`}>
+                className={`${typeStyle} px-3 py-2 flex gap-x-[1vw] items-center`}>
                 {leftIcon}
                 <p className="max-w-[40vw] truncate">{label}</p>
                 {rightIcon && <div className="pl-2 flex items-center">{rightIcon}</div>}

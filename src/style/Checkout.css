@@ -1,0 +1,62 @@
+/* .curve {
+    position: absolute;
+    right: 22px;
+    top: 180px;
+    width: 220px;
+    height: 0;
+    border-image:red;
+    border-bottom: 300px solid rgb(205, 196, 196);
+    border-bottom-style:  linear-gradient(122.39deg, #F4F4F4 6.61%, rgba(244, 244, 244, 0) 48.78%);
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    transform: scaleX(2);
+    transform-origin: right;
+} */
+
+
+/* .curve{
+    position: absolute;
+    right: 22px;
+    top: 130px;
+    width: 220px;
+    height: 150px;
+    background: linear-gradient(122.39deg, #F4F4F4 6.61%, rgba(244, 244, 244, 0) 48.78%);
+    transform: perspective(2.1px) rotateX(1deg);
+    
+
+} */
+
+.curve1 {
+    position: absolute;
+    top: 250px;
+    left: 170px;
+    width: 500px;
+    height: 720px;
+    background-image: linear-gradient(190.08deg, #F4F4F4 19.7%, rgba(244, 244, 244, 0) 79.16%);
+    clip-path: polygon(40% 0%, 0% 100%, 100% 100%, 55% 0%);
+    transform: rotate(303deg);
+}
+.curve2 {
+    position: absolute;
+    top: -32px;
+    right: 380px;
+    width: 500px;
+    height: 720px;
+    background-image: linear-gradient(190.08deg, #F4F4F4 19.7%, rgba(244, 244, 244, 0) 79.16%);
+    clip-path: polygon(40% 0%, 0% 100%, 100% 100%, 60% 0%);
+    transform: rotate(57deg);
+}
+
+.curve3 {
+    position: absolute;
+    right: 8px;
+    top: 180px;
+    width: 250px;
+    height: 340px;
+    background-image: linear-gradient(156.08deg, #F4F4F4 15.7%, rgba(244, 244, 244, 0) 59.16%);
+    clip-path: polygon(30% 0%, 0% 100%, 100% 100%, 70% 0);
+}
+/* top-left */
+/* bottom left */
+/* bottom right */
+

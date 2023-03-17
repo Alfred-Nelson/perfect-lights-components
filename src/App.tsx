@@ -8,6 +8,12 @@ import ProductCard from "./components/ProductCard";
 import Checkbox from "./components/CheckBox";
 import { useState } from "react"
 import SingleSelection from "./components/SingleSelection";
+import TopNavbar from "./components/NavigationOutlet";
+import BaseOutlet from "./pages";
+import image43 from "./assets/image43.png"
+import image65 from "./assets/image65.png"
+import image66 from "./assets/image66.png"
+import Footer from "./components/Footer";
 
 const Horizontaldata = [
   {
@@ -128,26 +134,26 @@ const VerticalData = [
 
 const ProductData = [
   {
-    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    imgUrl: image43,
     category: "ECO",
     name: "LED Cob Spot Light Hybec | PRO-45",
     price: 4000
   },
   {
-    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    imgUrl: image65,
     category: "ELITE",
     name: "LED Cob Spot Light Hybec | PRO-45",
     price: 4000
   },
   {
-    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    imgUrl: image66,
     category: "ELITE",
     name: "LED Cob Spot Light Hybec | PRO-45",
     price: 4000
   },
   {
     brand: "Tommy Geoco’s",
-    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPQAzTCu4RJAH2r0ua63ys-6N23CZcFs9KQ&usqp=CAU",
+    imgUrl: image66,
     category: "PROFESSIONAL",
     name: "LED Cob Spot Light Hybec | PRO-45",
     price: 4000
@@ -162,27 +168,29 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center mt-[20svh]">
+      <TopNavbar />
+      <BaseOutlet />
+      <Footer />
+
+      {/* <div className="flex justify-center mt-[20svh]">
         <p className="bg-pot-yellow px-4 py-1 font-semibold">Welcome to Perfect Lights</p>
-      </div>
+      </div> */}
 
 
-      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+
+
+
+      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         <SingleSelection value={0} disabled={true} />
         <SingleSelection value={1} disabled={false} />
-      </div>
-
-
-
-
-
+      </div> */}
 
       {/*Single Check Box */}
-      <div className="flex flex-wrap justify-center items-center gap-5 p-8">
+      {/* <div className="flex flex-wrap justify-center items-center gap-5 p-8">
         <Checkbox value={0} disabled={true} />
         <Checkbox value={1} disabled={false} />
         <Checkbox value={2} disabled={false} />
-      </div>
+      </div> */}
 
 
       {/* Product Card Component */}
