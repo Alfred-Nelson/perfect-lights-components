@@ -9,7 +9,7 @@ import linkedIn from "../assets/svg/linkedIn.svg"
 import copyrightsign from "../assets/svg/copyrightsign.svg"
 function Footer() {
     return (
-        <footer className='flex flex-col gap-y-10 mt-10 pt-32 pb-10 bg-black text-white'>
+        <footer className='flex flex-col gap-y-2 mt-10 pt-20 pb-10 bg-black text-white'>
             <div className='flex justify-between gap-10 border-b-2 border-b-[#1D1D1D] px-20 py-6 pb-20'>
 
 
@@ -38,7 +38,7 @@ function Footer() {
                 </div>
 
 
-                <div className='grid grid-cols-2 gap-10 '>
+                <div className='grid grid-cols-2 gap-20 '>
 
 
                     <div>
@@ -89,12 +89,10 @@ function Footer() {
 
             </div>
 
-            <div className='flex justify-center items-center text-center gap-2'>
+            <div className='flex justify-center items-center text-center gap-2 mt-6'>
                 <img className='mt-1' src={copyrightsign} alt="copyrightsign" /> <p>copyright text lorem ipsum</p>
             </div>
-
-
-
+            
         </footer>
     )
 }

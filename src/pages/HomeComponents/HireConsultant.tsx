@@ -3,30 +3,45 @@ import { RightArrowIcon } from '../../assets/ArrowIcons'
 import TickMark from '../../assets/TickMark'
 import Button from '../../components/Button'
 import man1 from "../../assets/man1.png"
-
+import {motion} from "framer-motion"
 function HireConsultant() {
+    const textAnimate = {
+        offscreen: {
+            x: -100,
+            opacity: 0,
+        },
+        onscreen: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 1
+            }
+        }
+    }
     return (
         <div className='w-full h-full'>
 
 
-            <div className='flex justify-end items-center py-32 px-32 pr-5 relative'>
+            <motion.div initial={"offscreen"} whileInView={"onscreen"} viewport={{ once: false, amount: 0.5 }} transition={{ staggerChild: 1 }}  className='flex justify-end items-center py-32 px-32 pr-5 relative'>
 
                 <div className='flex flex-col  justify-start gap-y-6 w-full  h-[500px] absolute z-10 top-[19%] left-0 px-32' >
 
-                    <div className='w-[450px]'>
+                    <motion.div  variants={textAnimate} className='w-[450px]'>
                         <h1 className='text-[4rem] font-[roboto] font-bold tracking-tight'>Hire a design consultant</h1>
                         <p className='text-md mt-2 '>Lorem ipsum dolor sit amet consectetur. Sit ac rhoncus non at arcu consequat amet etiam. Nisl massa consequat sed</p>
-                    </div>
+                    </motion.div>
 
-                   
+
                     <div className='flex flex-col items-start space-y-6 mt-10'>
-                        <div>
-                            <div className='flex flex-row items-center space-x-2'>
+                        <motion.div variants={textAnimate} >
+                            <motion.div  variants={textAnimate} className='flex flex-row items-center space-x-2'>
                                 <div className='flex items-center justify-center w-4 h-4 rounded-full bg-pot-yellow '>
                                     <TickMark color='white' />
                                 </div>
                                 <p>Mauris pellentesque congue libero nec</p>
-                            </div>
+                            </motion.div>
 
                             <div className='flex flex-row items-center space-x-2'>
                                 <div className='flex items-center justify-center w-4 h-4 rounded-full bg-pot-yellow '>
@@ -34,13 +49,13 @@ function HireConsultant() {
                                 </div>
                                 <p>Suspendisse mollis tincidunt</p>
                             </div>
-                            <div className='flex flex-row items-center space-x-2'>
+                            <motion.div variants={textAnimate} className='flex flex-row items-center space-x-2'>
                                 <div className='flex items-center justify-center w-4 h-4 rounded-full bg-pot-yellow '>
                                     <TickMark color='white' />
                                 </div>
                                 <p>Praesent varius justo vel justo pulvinar </p>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                         <Button variant='primary' label='Hire a consultant' rightIcon={<RightArrowIcon />} />
                     </div>
 
@@ -50,7 +65,7 @@ function HireConsultant() {
                     <img className='absolute -top-14 right-6 w-[85%] h-[100%] ' src={man1} alt="man-consult" />
                 </div>
 
-            </div>
+            </motion.div>
 
 
 
@@ -61,7 +76,7 @@ function HireConsultant() {
 
 
 
-            <div className='grid grid-cols-3 gap-12  py-32 px-32'>
+            <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-12  py-24 px-32'>
 
 
                 <div className='flex flex-col gap-y-2 '>

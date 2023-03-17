@@ -11,18 +11,19 @@ import location from "../../assets/svg/location.svg";
 import { motion } from "framer-motion";
 import "../../style/ProfessionalUser.css"
 
+
 const ProfessionalUesrData = [
   {
     imgUrl: Ellipse2,
-    name: "Professional Users",
+    name: "Macauley Herring",
     profession: "Architect",
     companyName: "Name of the company",
     about: "Lorem ipsum dolor sit amet consectetur. Tempus aliquet volutpat eu tellus morbi sit dui. Tempus",
-    location: "Ahemdabad"
+    location: "Vadodara"
   },
   {
     imgUrl: Ellipse1,
-    name: "Professional Users",
+    name: "Macauley Herring",
     profession: "Architect",
     companyName: "Name of the company",
     about: "Lorem ipsum dolor sit amet consectetur. Tempus aliquet volutpat eu tellus morbi sit dui. Tempus",
@@ -30,15 +31,15 @@ const ProfessionalUesrData = [
   },
   {
     imgUrl: Ellipse2,
-    name: "Professional Users",
+    name: "Macauley Herring",
     profession: "Architect",
     companyName: "Name of the company",
     about: "Lorem ipsum dolor sit amet consectetur. Tempus aliquet volutpat eu tellus morbi sit dui. Tempus",
-    location: "Ahemdabad"
+    location: "Vadodara"
   },
   {
     imgUrl: Ellipse1,
-    name: "Professional Users",
+    name: "Macauley Herring",
     profession: "Architect",
     companyName: "Name of the company",
     about: "Lorem ipsum dolor sit amet consectetur. Tempus aliquet volutpat eu tellus morbi sit dui. Tempus",
@@ -46,11 +47,11 @@ const ProfessionalUesrData = [
   },
   {
     imgUrl: Ellipse2,
-    name: "Professional Users",
+    name: "Macauley Herring",
     profession: "Architect",
     companyName: "Name of the company",
     about: "Lorem ipsum dolor sit amet consectetur. Tempus aliquet volutpat eu tellus morbi sit dui. Tempus",
-    location: "Ahemdabad"
+    location: "Vadodara"
   },
 ]
 
@@ -76,21 +77,54 @@ function ProfessionalUser() {
     setSlideIndex(parseInt(e.target.value));
   };
 
+  const lefttextAnimate = {
+    offscreen: {
+      x: -100,
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1
+      }
+    }
+  }
+  const righttextAnimate = {
+    offscreen: {
+      x: 100,
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1
+      }
+    }
+  }
 
 
   return (
-    <div className='flex flex-row gap-20 pl-24 py-24 bg-white text-black'>
+    <motion.div className='flex flex-row gap-20 pl-24 py-24 bg-white text-black' >
 
 
       {/*  Ist Box */}
-      <div className='flex flex-col gap-5 w-[40%] py-10 px-2 '>
-        <h1 className='font-bold text-6xl'>Professional Users</h1>
-        <p>Lorem ipsum dolor sit amet consectetur. Interdum mi morbi eu laoreet. Pharetra commodo diam cursus eget eget pharetra. Faucibus a dignissim.</p>
-        <div className='flex flex-col gap-5 w-60 mt-5'>
+      <motion.div initial={"offscreen"} whileInView={"onscreen"} viewport={{ once: false, amount: 0.5 }} transition={{ staggerChild: 1 }} className='flex flex-col gap-5 w-[40%] py-10 px-2 '>
+        <motion.h1 variants={lefttextAnimate} className='font-bold text-6xl'>Professional Users</motion.h1>
+        <motion.p variants={righttextAnimate}>Lorem ipsum dolor sit amet consectetur. Interdum mi morbi eu laoreet. Pharetra commodo diam cursus eget eget pharetra. Faucibus a dignissim.</motion.p>
+        <motion.div variants={lefttextAnimate} className=' w-60 mt-5'>
           <Button variant='primary' label='Become a professional' rightIcon={<RightArrowIcon />} />
+        </motion.div>
+
+        <motion.div variants={righttextAnimate} className=' w-60 mt-5'>
           <Button variant='secondary-outline' label='Explore directory' rightIcon={<RightArrowIcon />} />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
 
       {/* Second Box */}
@@ -110,7 +144,7 @@ function ProfessionalUser() {
                       <img className='rounded-full object-cover w-full h-full' src={el.imgUrl} alt={el.name} />
                     </div>
 
-                    <h1>{el.name}</h1>
+                    <h1 className='text-[22px] font-bold'>{el.name}</h1>
 
                     <div className='rounded-full bg-pot-yellow text-white  py-1.5 font-semibold px-4'>
                       {el.profession}
@@ -132,9 +166,6 @@ function ProfessionalUser() {
                       <div> <img className='' src={tweeter} alt="tweeter" /> </div>
                     </div>
                   </div>
-
-
-
                 </motion.div>
               );
             })}
@@ -165,7 +196,7 @@ function ProfessionalUser() {
 
 
 
-    </div>
+    </motion.div>
   )
 }
 
