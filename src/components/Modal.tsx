@@ -34,7 +34,7 @@ const Modal = ({ handleCancel = () => { }, children }: ModalPropType) => {
                         e.preventDefault();
                         e.stopPropagation();
                     }}
-                    className={`select-none z-[50] pointer-events-auto w-[80vw] max-w-2xl h-fit flex flex-col p-3 bg-white rounded-lg shadow-lg`}
+                    className={`select-none z-[50] pointer-events-auto w-[80vw] max-w-2xl h-fit flex flex-col p-3 bg-white  shadow-lg`}
                 >
                     {children}
                 </div>

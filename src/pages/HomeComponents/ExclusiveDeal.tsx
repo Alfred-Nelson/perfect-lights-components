@@ -24,7 +24,7 @@ function ExclusiveDeal() {
 
 
             <div>
-                <motion.p initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }} className='text-center text-[55px] tracking-tight font-bold leading-12 text-black'>Exclusive Deals of Lights Collection</motion.p>
+                <motion.p initial={{ y: -100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }} className='text-center text-[55px] tracking-tight font-bold leading-12 text-black'>Exclusive Deals of Lights Collection</motion.p>
             </div>
         </div>
     )

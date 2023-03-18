@@ -6,11 +6,9 @@ import React, {
     useEffect,
     useRef,
     useCallback,
-    Dispatch,
-    SetStateAction,
 } from "react";
 import { debounce } from "lodash";
-import { primaryStyle } from "./Button";
+
 
 type InputFieldType = {
     label?: string;
@@ -127,10 +125,10 @@ const InputField = ({
                             }
                             setInputVal(validate(e.target.value));
                             onChange(validate(e.target.value));
-                            console.log("runing without debounccall");
+                            // console.log("runing without debounccall");
                         } else {
                             setInputVal(validate(e.target.value));
-                            console.log("runing with debounccall");
+                            // console.log("runing with debounccall");
                         }
                     }}
                     className={`${typeStyle} text-[13px] w-full ${leftIcon ? "pl-10" : "pr-10"}  p-2 ${disabled ? disabledStyle : typeStyle}`

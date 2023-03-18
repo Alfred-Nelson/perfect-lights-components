@@ -45,7 +45,7 @@ function CheckoutProduct() {
     }
     const textAnimate = {
         offscreen: {
-            y:100,
+            y:50,
             opacity: 0,
         },
         onscreen: {
@@ -58,10 +58,6 @@ function CheckoutProduct() {
             }
         }
     }
-
-
-
-
 
 
     return (
