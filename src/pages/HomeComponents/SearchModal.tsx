@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState} from "react"
 import Search from '../../assets/Search';
 import Button from '../../components/Button';
 import InputField from '../../components/InputField';
@@ -10,6 +11,8 @@ type SearchModalPropType = {
 function SearchModal(
   { handleClose }: SearchModalPropType
 ) {
+
+  const [email, setEmail] = useState<string>("");
   return (
     <Modal
       handleCancel={handleClose}
@@ -20,10 +23,11 @@ function SearchModal(
           <div className='flex items-center w-96'>
             <InputField
               placeholder="Search professionals here"
-              onChange={(text) => console.log(text)}
+              onChange={(e) => setEmail(e)}
               leftIcon={<Search />}
               variant={"primary"}
               hint=""
+              withDebounce={true}
             />
           </div>
           <div className=' w-70'><Button variant='primary' label='Search' /></div>

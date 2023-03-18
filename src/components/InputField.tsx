@@ -56,29 +56,29 @@ const InputField = ({
     const [inputVal, setInputVal] = useState<string>("");
     const [focusInput, setFocusInput] = useState<boolean>(false);
     const inputRef = useRef<HTMLInputElement>(null);
-
+  
     useEffect(() => {
-        // if(!withDebounce) return
-        if (inputVal !== value) {
-            setInputVal(value);
-        }
+      // if(!withDebounce) return
+      if (inputVal !== value) {
+        setInputVal(value);
+      }
     }, [value]);
-
+  
     const optimisedCall = useCallback(
-        debounce((inputVal) => onChange(inputVal), 400),
-        []
+      debounce((inputVal) => onChange(inputVal), 400),
+      []
     );
-
+  
     useEffect(() => {
-        if (withDebounce) {
-            optimisedCall(inputVal);
-        }
+      if (withDebounce) {
+        optimisedCall(inputVal);
+      }
     }, [inputVal]);
-
+  
     // useEffect(() => {
-    //     if (focusInput) {
-    //         setOnBlur(false);
-    //     }
+    //   if (focusInput) {
+    //     setOnBlur(false);
+    //   }
     // }, [focusInput]);
 
     const typeStyle =
@@ -125,8 +125,10 @@ const InputField = ({
                             }
                             setInputVal(validate(e.target.value));
                             onChange(validate(e.target.value));
+                            console.log("runing without debounccall");
                         } else {
                             setInputVal(validate(e.target.value));
+                            console.log("runing with debounccall");
                         }
                     }}
                     className={`${typeStyle} text-[13px] w-full ${leftIcon ? "pl-10" : "pr-10"}  p-2 ${disabled ? disabledStyle : typeStyle}`
