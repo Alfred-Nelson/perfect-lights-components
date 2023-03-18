@@ -23,7 +23,7 @@ function Footer() {
                     <div className='flex items-center w-96'>
                         <InputField
                             placeholder="Enter email address"
-                            // onChange={(text) => console.log(text)}
+                            onChange={(text) => console.log(text)}
                         />
                     </div>
                     <div className='flex items-center text-sm font-2xl h-[40px]'>

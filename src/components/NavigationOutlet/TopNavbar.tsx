@@ -13,8 +13,8 @@ function TopNavbar() {
         setOpenModal(true);
     }
     return (
-        <header>
-            <nav className='flex flex-row justify-between bg-black text-white h-[50px]'>
+        <header className='sticky top-0 bg-black z-50'>
+            <nav className='flex flex-row justify-between bg-black text-white h-[50px] '>
                 <div className="flex items-center ml-4 ">
                     <img className='object-cover w-[40px] h-[40px]' src={logo} alt="logo" />
                 </div>

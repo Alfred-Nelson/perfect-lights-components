@@ -20,9 +20,10 @@ function SearchModal(
           <div className='flex items-center w-96'>
             <InputField
               placeholder="Search professionals here"
-              // onChange={(text) => console.log(text)}
+              onChange={(text) => console.log(text)}
               leftIcon={<Search />}
               variant={"primary"}
+              hint=""
             />
           </div>
           <div className=' w-70'><Button variant='primary' label='Search' /></div>
