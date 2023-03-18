@@ -10,7 +10,7 @@ type InputFieldType = {
     hint?: string | string[];
     error?: string;
     inputType?: string;
-    onChange: (text: string) => void;
+    // onChange: (text: string) => void;
     rightIcon?: React.ReactNode | null;
     leftIcon?: React.ReactNode | null;
     className?: string;
@@ -30,7 +30,7 @@ const InputField = ({
     variant = "primary",
     label = "",
     value = "",
-    onChange,
+    // onChange,
     inputType = "text",
     hint = [],
     leftIcon = null,
@@ -63,8 +63,7 @@ const InputField = ({
                 <p className="font-medium text-[15px] pb-2 px-1">{label}</p>
             )}
             <div
-                className={`relative w-full flex justify-between items-center border  ${focusInput && "border-pot-maroon"
-                    } stroke-black ease-in-out transition`}
+                className={`relative w-full flex justify-between items-center border stroke-black ease-in-out transition`}
             >
                 {leftIcon && (
                     <div className={`absolute inset-y-0 left-0 flex items-center pl-2 ml-2 pointer-events-none`}>{leftIcon}</div>

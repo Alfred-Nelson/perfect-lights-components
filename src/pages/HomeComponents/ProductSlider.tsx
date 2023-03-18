@@ -35,9 +35,9 @@ function ProductSlider() {
     return (
 
         <div className="appearance-none bg-white text-black">
-            <div className="m-auto w-[700px] text-center ">
-                <h1 className="text-[50px] font-bold">Professionally</h1>
-                <h1 className="text-[50px] font-bold"> Recommended Products</h1>
+            <div  className="m-auto w-[700px] text-center ">
+                <motion.h1 initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }} className="text-[50px] font-bold">Professionally</motion.h1>
+                <motion.h1 initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }} className="text-[50px] font-bold"> Recommended Products</motion.h1>
             </div>
             <div className="w-[100%] flex  justify-center items-center gap-5 py-8 mt-10">
                 <div
