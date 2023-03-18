@@ -65,9 +65,11 @@ const InputField = ({
     }, [value]);
   
     const optimisedCall = useCallback(
-      debounce((inputVal) => onChange(inputVal), 400),
+      debounce((inputVal) => onChange(inputVal), 1000),
       []
     );
+  
+    
   
     useEffect(() => {
       if (withDebounce) {

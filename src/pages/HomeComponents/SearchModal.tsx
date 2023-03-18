@@ -27,7 +27,7 @@ function SearchModal(
               leftIcon={<Search />}
               variant={"primary"}
               hint=""
-              withDebounce={true}
+              // withDebounce={true}
             />
           </div>
           <div className=' w-70'><Button variant='primary' label='Search' /></div>
