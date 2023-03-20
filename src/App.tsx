@@ -162,23 +162,12 @@ const ProductData = [
 
 
 function App() {
-  const [check, setCheck] = useState<boolean>(false);
-
-
 
   return (
     <>
       <TopNavbar />
       <BaseOutlet />
       <Footer />
-
-
-
-
-
-
-
-
 
 
 

@@ -45,7 +45,7 @@ function CheckoutProduct() {
     }
     const textAnimate = {
         offscreen: {
-            y:50,
+            y: -100,
             opacity: 0,
         },
         onscreen: {
@@ -53,8 +53,7 @@ function CheckoutProduct() {
             opacity: 1,
             transition: {
                 type: "spring",
-                bounce: 0.4,
-                duration: 1
+                duration: 2
             }
         }
     }
@@ -62,7 +61,7 @@ function CheckoutProduct() {
 
     return (
 
-        <div>
+        <div className='w-full h-full '>
 
             <motion.div className='flex justify-between relative bg-white' initial={"offscreen"} whileInView={"onscreen"} viewport={{ once: false, amount: 1 }} transition={{ staggerChild: 0.54 }}>
                 <motion.div
@@ -71,7 +70,6 @@ function CheckoutProduct() {
                     <img className='w-1/2 z-10' src={image53} alt="" />
                 </motion.div>
                 <motion.div
-                    // variants={imageAnimate} 
                     className='flex justify-end w-full'>
                     <img className='w-3/5 h-2/4 z-10' src={image54} alt="" />
                 </motion.div>
@@ -79,9 +77,7 @@ function CheckoutProduct() {
 
                 <motion.div className='curve1'></motion.div>
                 <motion.div className='curve2'></motion.div>
-                <motion.div
-                    // variants={imageAnimate} 
-                    className='curve3'></motion.div>
+                <motion.div className='curve3'></motion.div>
 
 
 
