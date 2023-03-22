@@ -29,7 +29,7 @@ export const secondaryStyle: string =
 export const secondaryOutlineStyle: string =
     "bg-white text-black stroke-black border-2 border-pot-grey5 hover:bg-pot-grey5 hover:text-white hover:stroke-white active:bg-pot-grey2  active:text-white active:border-none ease-in-out transition disabled:opacity-75";
 
-export const SecondaryDisabledStyle: string =
+export const secondaryDisabledStyle: string =
     "bg-pot-lightgrey text-pot-grey1 stroke-pot-grey1 cursor-not-allowed disabled:hover";
 
 export const secondaryOutlineStyleDisabled: string = "bg-pot-white text-pot-grey1 stroke-pot-grey1 border-2 border-pot-grey1 cursor-not-allowed disabled:hover"
@@ -63,7 +63,7 @@ const Button = ({
 
     const disabledStyle =
         variant === "primary" || variant === "secondary"
-            ? SecondaryDisabledStyle
+            ? secondaryDisabledStyle
             : variant === "secondary-outline" || variant === "primary-dark"
                 ? secondaryOutlineStyleDisabled : ""
 
@@ -73,7 +73,7 @@ const Button = ({
             <button
                 onClick={() => !disabled && onClick()}
                 // ${disabled ? disabledStyle : typeStyle}
-                className={`${typeStyle} px-3 py-2 flex gap-x-[1vw] items-center`}>
+                className={`${disabled ? disabledStyle : typeStyle} px-3 py-1.5 flex gap-x-[1vw] items-center`}>
                 {leftIcon}
                 <p className="max-w-[40vw] truncate">{label}</p>
                 {rightIcon && <div className="pl-2 flex items-center">{rightIcon}</div>}
