@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProp } from "./HeartIcon";
+import { IconProp } from "./ArrowIcons";
 
 const CrossIcon = ({ color }: IconProp) => {
   return (
