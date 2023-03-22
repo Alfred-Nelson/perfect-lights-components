@@ -8,10 +8,34 @@ import useClickOutside from "./hooks/useClickOutside";
 import useMouseLocation from "./hooks/useMouseLocation";
 
 function App() {
-  const containerRef = useRef(null)
-  const [openDropdown, setOpenDropdown] = useState(false)
-  const mouseLocation = useMouseLocation()
-  useClickOutside(containerRef, () => setOpenDropdown(false))
+  const containerRef = useRef(null);
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedFloor, setSelectedFloor] = useState<any>(null);
+  const [selectedArea, setSelectedArea] = useState<any>(null);
+  const mouseLocation = useMouseLocation();
+  useClickOutside(containerRef, () => {
+    setOpenDropdown(false)
+    setSelectedFloor(null)
+    setSelectedArea(null)
+  });
+
+  const areaData = Array.from({ length: 20 }).map((_, areaId) => ({
+    id: areaId,
+    name: `Area ${areaId}`,
+  }));
+
+  const floorData = Array.from({ length: 20 }).map((_, floorId) => ({
+    id: floorId,
+    name: `Floor ${floorId}`,
+    areas: areaData,
+  }));
+
+  const projectData = Array.from({ length: 20 }).map((_, projectId) => ({
+    id: projectId,
+    name: `Project ${projectId}`,
+    floors: floorData,
+  }));
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -21,7 +45,7 @@ function App() {
         </p>
       </div>
 
-      <div ref={containerRef} className="mt-10 translate-x-[10vh] relative">
+      <div ref={containerRef} className="z-50 mt-10 translate-x-[10vh] relative">
         <Button
           label="Button"
           // disabled={true}
@@ -29,7 +53,18 @@ function App() {
           onClick={() => setOpenDropdown(true)}
         />
         {openDropdown && (
-          <DropdownBox mouseLocation={mouseLocation as number} />
+          <DropdownBox
+            data={projectData}
+            mouseLocation={mouseLocation as number}
+            selected={{ 
+              project: selectedProject,
+              floor: selectedFloor,
+              area: selectedArea,
+              setProject: setSelectedProject,
+              setFloor: setSelectedFloor,
+              setArea: setSelectedArea,
+            }}
+          />
         )}
       </div>
       <div className="flex justify-center space-x-5 mt-10">

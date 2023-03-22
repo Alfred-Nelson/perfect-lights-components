@@ -12,7 +12,8 @@ module.exports = {
         "pot-grey5": "#242424",
         "pot-grey6": "#111111",
         "pot-lightgrey":"#CBCBCB",
-        "pot-maroon":"#772021"
+        "pot-maroon":"#772021",
+        "pot-black": "#242424",
       },
     },
   },
