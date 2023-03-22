@@ -87,8 +87,7 @@ function ProfessionalUser() {
       opacity: 1,
       transition: {
         type: "spring",
-        bounce: 0.4,
-        duration: 1
+        duration: 3
       }
     }
   }
@@ -102,15 +101,14 @@ function ProfessionalUser() {
       opacity: 1,
       transition: {
         type: "spring",
-        bounce: 0.4,
-        duration: 1
+        duration: 3
       }
     }
   }
 
 
   return (
-    <motion.div className='flex flex-row gap-20 pl-24 py-24 bg-white text-black' >
+    <motion.div className='flex flex-row gap-20 pl-24 py-20 bg-white text-black' >
 
 
       {/*  Ist Box */}
@@ -137,7 +135,11 @@ function ProfessionalUser() {
             {ProfessionalUesrData?.map((el, i) => {
               return (
 
-                <motion.div key={i} className="w-full" animate={{ x: -slideIndex * 318 + "px" }}>
+                <motion.div key={i} className="w-full"
+                  animate={{ opacity: 1, x: -slideIndex * 318 + "px" }}
+                  initial={{ opacity: 0, translateX: 0 }}
+                  transition={{ duration: 0.3, delay: i * 0.5 }}
+                >
                   <div className=' flex flex-col gap-2 items-center text-center bg-black text-white px-2 py-10 w-72'>
 
                     <div className='rounded-full'>

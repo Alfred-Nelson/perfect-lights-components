@@ -45,7 +45,7 @@ function CheckoutProduct() {
     }
     const textAnimate = {
         offscreen: {
-            y:100,
+            y: -100,
             opacity: 0,
         },
         onscreen: {
@@ -53,20 +53,15 @@ function CheckoutProduct() {
             opacity: 1,
             transition: {
                 type: "spring",
-                bounce: 0.4,
-                duration: 1
+                duration: 2
             }
         }
     }
 
 
-
-
-
-
     return (
 
-        <div>
+        <div className='w-full h-full '>
 
             <motion.div className='flex justify-between relative bg-white' initial={"offscreen"} whileInView={"onscreen"} viewport={{ once: false, amount: 1 }} transition={{ staggerChild: 0.54 }}>
                 <motion.div
@@ -75,7 +70,6 @@ function CheckoutProduct() {
                     <img className='w-1/2 z-10' src={image53} alt="" />
                 </motion.div>
                 <motion.div
-                    // variants={imageAnimate} 
                     className='flex justify-end w-full'>
                     <img className='w-3/5 h-2/4 z-10' src={image54} alt="" />
                 </motion.div>
@@ -83,9 +77,7 @@ function CheckoutProduct() {
 
                 <motion.div className='curve1'></motion.div>
                 <motion.div className='curve2'></motion.div>
-                <motion.div
-                    // variants={imageAnimate} 
-                    className='curve3'></motion.div>
+                <motion.div className='curve3'></motion.div>
 
 
 
@@ -105,52 +97,59 @@ function CheckoutProduct() {
             >
                 <motion.div
                     className='w-full h-auto relative'
-                    initial={{ x: -80, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }}
+                    whileHover={{ transition: { duration: 1, type: "spring", }, scale: 1.04 }}
+                
                 >
                     <div className='w-full h-full  '>
                         <img className='w-full h-full object-fit' src={image55} alt="" />
                     </div>
                     <div className='w-full flex justify-between items-center bg-black bg-opacity-30 text-white absolute bottom-0 p-3'  >
                         <p className='font-bold text-3xl'>Golden lights</p>
-                        <motion.div className='cursor-pointer' whileHover={{ scale: 1.50 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
+                        <motion.div className='cursor-pointer'
+                            initial={{ opacity: 1, x: -30 }}
+                            whileTap={{ scale: 1.2, x: 8 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
                     </div>
                 </motion.div>
 
                 <motion.div
                     className='w-full h-auto relative'
-                    initial={{ x: 80, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }}
+                    whileHover={{ transition: { duration: 1, type: "spring", }, scale: 1.04 }}
                 >
-                    <div className='w-full h-full  '>
+                    <div className='w-full h-full'>
                         <img className='w-full h-full object-fit' src={image57} alt="" />
                     </div>
                     <div className='w-full flex justify-between items-center bg-black bg-opacity-30 text-white absolute bottom-0 p-3'  >
                         <p className='font-bold text-3xl'>Golden lights</p>
-                        <motion.div className='cursor-pointer' whileHover={{ scale: 1.50 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
+                        <motion.div className='cursor-pointer' initial={{ opacity: 1, x: -30 }}
+                            whileTap={{ scale: 1.2, x: 8 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
                     </div>
                 </motion.div>
 
                 <motion.div
                     className='w-full h-auto relative'
-                    initial={{ x: -80, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }}
+                    
+                    whileHover={{ transition: { duration: 1, type: "spring", }, scale: 1.04 }}
                 >
                     <div className='w-full h-full  '>
                         <img className='w-full h-full object-fit' src={image55} alt="" />
                     </div>
                     <div className='w-full flex justify-between items-center bg-black bg-opacity-30 text-white absolute bottom-0 p-3'  >
                         <p className='font-bold text-3xl'>Golden lights</p>
-                        <motion.div className='cursor-pointer' whileHover={{ scale: 1.50 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
+                        <motion.div className='cursor-pointer' initial={{ opacity: 1, x: -30 }}
+                            whileTap={{ scale: 1.2, x: 8 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
                     </div>
                 </motion.div>
                 <motion.div
                     className='w-full h-auto relative'
-                    initial={{ x: 80, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring", bounce: 0.4, duration: 1 } }} viewport={{ once: false, amount: 0.5 }}
+                    whileHover={{ transition: { duration: 1, type: "spring", }, scale: 1.04 }}
                 >
                     <div className='w-full h-full  '>
                         <img className='w-full h-full object-fit' src={image57} alt="" />
                     </div>
                     <div className='w-full flex justify-between items-center bg-black bg-opacity-30 text-white absolute bottom-0 p-3'  >
                         <p className='font-bold text-3xl'>Golden lights</p>
-                        <motion.div className='cursor-pointer' whileHover={{ scale: 1.50 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
+                        <motion.div className='cursor-pointer' initial={{ opacity: 1, x: -30 }}
+                            whileTap={{ scale: 1.2, x: 8 }}><img src={rightarrow} alt="rightarrow" /></motion.div>
                     </div>
                 </motion.div>
             </motion.div>

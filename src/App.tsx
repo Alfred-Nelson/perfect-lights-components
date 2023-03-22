@@ -162,9 +162,6 @@ const ProductData = [
 
 
 function App() {
-  const [check, setCheck] = useState<boolean>(false);
-
-
 
   return (
     <>
@@ -172,11 +169,11 @@ function App() {
       <BaseOutlet />
       <Footer />
 
+
+
       {/* <div className="flex justify-center mt-[20svh]">
         <p className="bg-pot-yellow px-4 py-1 font-semibold">Welcome to Perfect Lights</p>
       </div> */}
-
-
 
 
 

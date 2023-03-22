@@ -1,6 +1,4 @@
 import React from "react";
-// import { urls } from "../utils/urls";
-// import LinkDiv from "./LinkDiv";
 
 type MustButtonPropsType = {
     onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => Promise<void> | void;
@@ -17,7 +15,7 @@ export type ButtonPropsType = {
     rightIcon?: React.ReactNode | null;
     label?: string;
 };
-// onClick?, label?, placeholder, hint?, error?, leftIcon?, rightIcon?, variant? = "primary"
+// onClick?, label?, leftIcon?, rightIcon?, variant? = "primary"
 // The buttons should have enumerated variants which are: primary, primary-dark, secondary, secondary-outline
 export const primaryStyle: string =
     "bg-pot-yellow text-white stroke-white hover:bg-pot-grey5 active:bg-pot-grey2 border-2 border-pot-yellow hover:border-pot-grey5 ease-in-out transition";
@@ -68,11 +66,10 @@ const Button = ({
             ? SecondaryDisabledStyle
             : variant === "secondary-outline" || variant === "primary-dark"
                 ? secondaryOutlineStyleDisabled : ""
-    // console.log(typeStyle)
+
 
     return (
         <>
-            {/* <LinkDiv to={to} className="w-fit"> */}
             <button
                 onClick={() => !disabled && onClick()}
                 // ${disabled ? disabledStyle : typeStyle}
@@ -81,7 +78,6 @@ const Button = ({
                 <p className="max-w-[40vw] truncate">{label}</p>
                 {rightIcon && <div className="pl-2 flex items-center">{rightIcon}</div>}
             </button>
-            {/* </LinkDiv> */}
         </>
     );
 };

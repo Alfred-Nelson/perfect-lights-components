@@ -28,7 +28,7 @@
 
 .curve1 {
     position: absolute;
-    top: 250px;
+    top: 290px;
     left: 170px;
     width: 500px;
     height: 720px;
@@ -49,7 +49,7 @@
 
 .curve3 {
     position: absolute;
-    right: 8px;
+    right: 20px;
     top: 180px;
     width: 250px;
     height: 340px;

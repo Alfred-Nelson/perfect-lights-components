@@ -35,9 +35,9 @@ function ProductSlider() {
     return (
 
         <div className="appearance-none bg-white text-black">
-            <div className="m-auto w-[700px] text-center ">
-                <h1 className="text-[50px] font-bold">Professionally</h1>
-                <h1 className="text-[50px] font-bold"> Recommended Products</h1>
+            <div  className="m-auto w-[700px] text-center ">
+                <motion.h1 initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring",  duration: 2 } }} viewport={{ once: false, amount: 0.5 }} className="text-[50px] font-bold">Professionally</motion.h1>
+                <motion.h1 initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { type: "spring",  duration: 2 } }} viewport={{ once: false, amount: 0.5 }} className="text-[50px] font-bold"> Recommended Products</motion.h1>
             </div>
             <div className="w-[100%] flex  justify-center items-center gap-5 py-8 mt-10">
                 <div
@@ -45,7 +45,10 @@ function ProductSlider() {
                 >
                     {ProductData?.map((el, i) => {
                         return (
-                            <motion.div key={i} className="w-full" animate={{ x: -slideIndex * 294 + "px" }}>
+                            <motion.div key={i} className="w-full" 
+                            animate={{opacity: 1, x: -slideIndex * 294 + "px" }} initial={{ opacity: 0, translateY: 0 }}
+                            transition={{ duration: 0.3, delay: i * 0.5 }}
+                        >
                                 <ProductCard
                                     imageUrl={el.imgUrl}
                                     price={el.price}
