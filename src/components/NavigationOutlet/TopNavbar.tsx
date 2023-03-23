@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import navbarLogo from "../../assets/svg/navbarLogo.svg"
-
-
-
 import CartIcon from "../../assets/CartIcon";
 import SearchIcon from '../../assets/SearchIcon';
 import UserIcon from '../../assets/UserIcon';
 import { navItems } from '../../utils/navitems';
+import SearchModal from '../../pages/HomeComponents/SearchModal';
+
 function TopNavbar() {
+    const [openModal, setOpenModal] = useState<boolean>(false);
+
+    const handleOpen = () => {
+        setOpenModal(true);
+    }
     return (
-        <header>
-            <nav className='flex flex-row justify-between bg-black text-white h-[50px]'>
+        <header className='sticky top-0 bg-black z-50'>
+            <nav className='flex flex-row justify-between bg-black text-white h-[50px] '>
                 <div className="flex items-center ml-4 ">
                     <img src={navbarLogo} alt="logo" />
                 </div>
@@ -30,10 +34,17 @@ function TopNavbar() {
                 </div>
 
                 <div className='flex flex-row space-x-4 items-center mr-9'>
-                    <div><CartIcon /></div>
-                    <div><SearchIcon /></div>
-                    <div><UserIcon /></div>
+                    <div className="cursor-pointer"><CartIcon /></div>
+                    <div onClick={handleOpen} className="cursor-pointer"><SearchIcon /></div>
+                    <div className="cursor-pointer"><UserIcon /></div>
                 </div>
+
+                {
+                    openModal && <SearchModal
+                        handleClose={() => setOpenModal(false)}
+                    />
+                }
+
             </nav>
         </header>
     )

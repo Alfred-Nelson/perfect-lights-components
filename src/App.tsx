@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import HeartIcon from "./assets/HeartIcon";
 import Button from "./components/Button";
 import HorizontalCard from "./components/HorizontalCard";
@@ -6,7 +7,6 @@ import InputField from "./components/InputField";
 import VerticalCard from "./components/VerticalCard";
 import ProductCard from "./components/ProductCard";
 import Checkbox from "./components/CheckBox";
-import { useState } from "react"
 import SingleSelection from "./components/SingleSelection";
 import TopNavbar from "./components/NavigationOutlet";
 import BaseOutlet from "./pages";
@@ -163,22 +163,18 @@ const ProductData = [
 
 
 function App() {
-  const [check, setCheck] = useState<boolean>(false);
-
-
 
   return (
     <>
-
       <TopNavbar />
       <BaseOutlet />
       <Footer />
 
+
+
       {/* <div className="flex justify-center mt-[20svh]">
         <p className="bg-pot-yellow px-4 py-1 font-semibold">Welcome to Perfect Lights</p>
       </div> */}
-
-
 
 
 
@@ -269,18 +265,20 @@ function App() {
       {/* InputField Component */}
       {/* <div className="flex justify-center m-auto w-60 space-x-5 mt-10">
 
+      <div className="flex justify-center m-auto w-60 space-x-5 mt-10">
         <InputField
           label="Password"
           placeholder="Enter your password"
-          hint={"Please Enter Correct Password"}
+          // hint={"Please Enter Correct Password"}
           onChange={(text) => console.log(text)}
           // disabled
           // leftIcon={<HeartIcon />}
           rightIcon={<HeartIcon />}
         />
-      </div> */}
-    </>
+      </div>
 
+      {/* <div></div> */}
+    </>
   );
 }
 

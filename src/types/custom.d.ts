@@ -9,6 +9,12 @@ declare module "*.png" {
 }
 
 declare module "*.svg" {
-    const path: string;
+    const path: any;
     export default path;
 }
+
+// declare module "\*.svg" {
+//     import React = require("react");
+//     const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
+//     export default ReactComponent;
+//   }

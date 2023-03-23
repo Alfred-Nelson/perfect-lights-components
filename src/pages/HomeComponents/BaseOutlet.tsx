@@ -5,6 +5,7 @@ import HireConsultant from './HireConsultant'
 import ProductCustomize from './ProductCustomize'
 import ProductSlider from './ProductSlider'
 import CheckoutProduct from './CheckoutProduct'
+import ProfessionalUser from './ProfessionalUser'
 
 
 function BaseOutlet() {
@@ -16,9 +17,11 @@ function BaseOutlet() {
             {/* Product Customization */}
             <ProductCustomize />
             <HireConsultant />
+            <ProfessionalUser />
             <MarqueeEffect />
             <CheckoutProduct />
             <ProductSlider />
+           
         </div>
     )
 }
