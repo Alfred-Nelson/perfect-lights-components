@@ -160,11 +160,3 @@ function CheckoutProduct() {
 }
 
 export default CheckoutProduct
-
-
-
-
-
-
-
-

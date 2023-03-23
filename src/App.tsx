@@ -15,6 +15,7 @@ import image65 from "./assets/image65.png"
 import image66 from "./assets/image66.png"
 import Footer from "./components/Footer";
 
+
 const Horizontaldata = [
   {
     imageUrl: "https://media.istockphoto.com/id/1325377236/vector/abstract-golden-light-circle-effect.jpg?s=612x612&w=0&k=20&c=L3ETisfbMwvd2u768hwX81IEQVOcWX90sF7ebMKR3kI=",

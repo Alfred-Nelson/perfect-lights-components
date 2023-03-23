@@ -108,7 +108,7 @@ function HireConsultant() {
                 </div>
 
                 <div className='w-[600px] h-[600px] bg-[#EFEFEF] bg-opacity-10 rounded-full -ml-7  mr-10 relative -overflow-y-hidden' >
-                    <img className='absolute -top-14 right-6 w-[85%] h-[100%] ' src={man1} alt="man-consult" />
+                    <img className='absolute -top-14 right-6 w-[85%] h-[650px] rounded-bl-[200px]  rounded-br-[250px]' src={man1} alt="man-consult" />
                 </div>
 
             </motion.div>
